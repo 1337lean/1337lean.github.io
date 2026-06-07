@@ -1,6 +1,18 @@
 # lean
 
-Modern personal website for GitHub Pages.
+Personal GitHub Pages site for lean.
+
+The site is a compact developer profile with a kinetic wordmark, an animated
+signal-field background, a short about section, and a stack snapshot.
+
+Live site: <https://1337lean.github.io>
+
+## Stack
+
+- HTML
+- CSS
+- JavaScript
+- GitHub Pages
 
 ## Local Development
 
@@ -10,20 +22,18 @@ Open `index.html` directly in a browser, or run a small static server:
 python3 -m http.server 8000
 ```
 
-Then visit `http://localhost:8000`.
+Then visit <http://localhost:8000>.
 
-## GitHub Pages Deployment
-
-1. Push these files to the `main` branch of `1337lean.github.io`.
-2. In GitHub, open the repository settings.
-3. Under Pages, publish from the `main` branch root.
-4. The site will be available at `https://1337lean.github.io`.
-
-## File Structure
+## Files
 
 ```text
-index.html   Semantic page markup
-styles.css   Responsive tech-inspired visual system
-script.js    Scroll reveal, animated terminal text, and canvas signal field
-README.md    Project notes and deployment instructions
+index.html   Page structure and content
+styles.css   Responsive visual system
+script.js    Scroll effects, reveal states, and canvas animation
+README.md    Project notes
 ```
+
+## Deployment
+
+This repository is published with GitHub Pages from the `main` branch root.
+
