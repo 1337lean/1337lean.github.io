@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta
+      name="description"
+      content="lean is a developer building fast, useful tools for the web."
+    >
+    <title>lean</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <canvas class="signal-canvas" id="signal-canvas" aria-hidden="true"></canvas>
+
+    <main>
+      <section class="intro" aria-label="lean intro">
+        <h1 class="wordmark" aria-label="lean">
+          <span class="letter letter-l" data-letter="l">l</span>
+          <span class="letter letter-e" data-letter="e">e</span>
+          <span class="letter letter-a" data-letter="a">a</span>
+          <span class="letter letter-n" data-letter="n">n</span>
+        </h1>
+        <p class="scroll-cue" aria-hidden="true">scroll</p>
+      </section>
+
+      <section class="content" aria-label="About lean">
+        <section class="about-section" id="about" data-reveal>
+          <div class="about-shell">
+            <div class="about-copy">
+              <p class="profile-title">about me</p>
+              <p>
+                I&apos;m lean, a developer focused on fast interfaces, useful
+                diagnostics, and lightweight software that feels direct and sharp.
+                I like projects where the details matter: response time, clarity,
+                and the little decisions that make a tool feel good to use.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="stack-section" data-reveal>
+          <div class="stack-header">
+            <p class="section-kicker">Stack / toolchain</p>
+            <p>small pieces wired for speed</p>
+          </div>
+          <ul class="stack-list" aria-label="Technology stack">
+            <li data-stack="core">Python</li>
+            <li data-stack="web">JavaScript</li>
+            <li data-stack="types">TypeScript</li>
+            <li data-stack="ui">React</li>
+            <li data-stack="runtime">Node.js</li>
+            <li data-stack="edge">APIs</li>
+            <li data-stack="media">Media tooling</li>
+          </ul>
+        </section>
+
+        <footer class="site-footer" data-reveal>
+          <p>lean / 1337lean.github.io</p>
+          <nav aria-label="Footer links">
+            <a href="https://github.com/1337lean">github</a>
+            <a href="https://buffer.lol">buffer.lol</a>
+          </nav>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
