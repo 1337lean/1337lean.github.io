@@ -47,19 +47,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-body::before {
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  content: "";
-  background-image:
-    linear-gradient(rgba(200, 164, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(200, 164, 255, 0.05) 1px, transparent 1px);
-  background-size: 44px 44px;
-  mask-image: radial-gradient(circle at 50% 34%, black, transparent 76%);
-  pointer-events: none;
-}
-
 body::after {
   position: fixed;
   inset: 0;
