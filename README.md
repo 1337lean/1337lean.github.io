@@ -3,7 +3,8 @@
 Personal GitHub Pages site for lean.
 
 The site is a compact developer profile with a kinetic wordmark, an animated
-signal-field background, a short about section, and a stack snapshot.
+signal-field background, a short about section, an applied AI section, and a
+stack snapshot.
 
 Live site: <https://1337lean.github.io>
 
@@ -13,6 +14,7 @@ Live site: <https://1337lean.github.io>
 - CSS
 - JavaScript
 - GitHub Pages
+- LLM APIs / applied AI positioning
 
 ## Local Development
 
@@ -36,4 +38,3 @@ README.md    Project notes
 ## Deployment
 
 This repository is published with GitHub Pages from the `main` branch root.
-
