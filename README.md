@@ -2,9 +2,10 @@
 
 Personal GitHub Pages site for lean.
 
-The site is a compact developer profile with a kinetic wordmark, an animated
-signal-field background, a short about section, an applied AI section, and a
-stack snapshot.
+The site is a product-led developer portfolio built around lean's work on
+buffer.lol and BufferDash. Its design language shares the restrained dark
+surfaces, violet accents, terminal details, and product-first tone of those
+projects.
 
 Live site: <https://1337lean.github.io>
 
@@ -14,7 +15,7 @@ Live site: <https://1337lean.github.io>
 - CSS
 - JavaScript
 - GitHub Pages
-- LLM APIs / applied AI positioning
+- Responsive, accessible product previews
 
 ## Local Development
 
@@ -30,8 +31,8 @@ Then visit <http://localhost:8000>.
 
 ```text
 index.html   Page structure and content
-styles.css   Responsive visual system
-script.js    Scroll effects, reveal states, and canvas animation
+styles.css   Shared Buffer-inspired visual system and responsive layout
+script.js    Lightweight progressive reveal behavior
 README.md    Project notes
 ```
 

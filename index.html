@@ -6,116 +6,280 @@
     <meta name="color-scheme" content="dark">
     <meta
       name="description"
-      content="lean is a developer building fast web tools, AI workflows, and useful diagnostics."
+      content="lean builds fast, focused software for the open web, including buffer.lol and BufferDash."
     >
-    <title>lean</title>
+    <meta name="theme-color" content="#08080d">
+    <title>lean — developer &amp; builder</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
     >
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
   </head>
   <body>
-    <canvas class="signal-canvas" id="signal-canvas" aria-hidden="true"></canvas>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="grid-overlay" aria-hidden="true"></div>
 
-    <main>
-      <section class="intro" aria-label="lean intro">
-        <h1 class="wordmark" aria-label="lean">
-          <span class="letter letter-l" data-letter="l">l</span>
-          <span class="letter letter-e" data-letter="e">e</span>
-          <span class="letter letter-a" data-letter="a">a</span>
-          <span class="letter letter-n" data-letter="n">n</span>
-        </h1>
-        <p class="scroll-cue" aria-hidden="true">scroll</p>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="lean home">
+        <span class="brand-mark" aria-hidden="true">&gt;_</span>
+        <span>le<span>an</span></span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#approach">Approach</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <a
+        class="header-link"
+        href="https://github.com/1337lean"
+        target="_blank"
+        rel="noreferrer"
+      >GitHub <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow"><span class="status-dot"></span> Developer / builder</p>
+          <h1 id="hero-title">I build tools that <span>stay out of the way.</span></h1>
+          <p class="hero-lede">
+            Fast, focused software for the open web—from network diagnostics to
+            first-party analytics and practical AI workflows.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#work">View selected work <span>↓</span></a>
+            <a
+              class="secondary-button"
+              href="https://buffer.lol"
+              target="_blank"
+              rel="noreferrer"
+            >Open buffer.lol <span>↗</span></a>
+          </div>
+          <ul class="hero-principles" aria-label="Working principles">
+            <li><span>●</span> Open web</li>
+            <li><span>●</span> Privacy-minded</li>
+            <li><span>●</span> Useful by default</li>
+          </ul>
+        </div>
+
+        <div class="terminal" data-reveal aria-label="Project status terminal preview">
+          <div class="terminal-bar">
+            <span class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <strong>lean — projects</strong>
+            <span class="terminal-status">ready</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="prompt">➜</span> <span class="path">~</span> lean projects --status</p>
+            <div class="terminal-rule"></div>
+            <p><strong>buffer.lol</strong> <span class="terminal-live">● live</span></p>
+            <p class="terminal-muted">network + developer utilities</p>
+            <p><strong>BufferDash</strong> <span class="terminal-private">◆ self-hosted</span></p>
+            <p class="terminal-muted">first-party analytics + runtime signals</p>
+            <div class="terminal-rule"></div>
+            <p><span class="success">✓</span> systems focused · interfaces clear</p>
+            <p class="terminal-command"><span class="prompt">➜</span> <span class="path">~</span> <span class="cursor"></span></p>
+          </div>
+          <div class="terminal-foot">
+            <span><i></i> building in public</span>
+            <span>2026</span>
+          </div>
+        </div>
       </section>
 
-      <section class="content" aria-label="About lean">
-        <section class="about-section" id="about" data-reveal>
-          <div class="about-shell">
-            <div class="about-copy">
-              <p class="profile-title">about me</p>
-              <p>
-                I&apos;m lean, a developer focused on fast interfaces, useful
-                diagnostics, AI-assisted workflows, and lightweight software that
-                feels direct and sharp. I like projects where the details matter:
-                response time, clarity, and the little decisions that make a tool
-                feel good to use.
+      <section class="work-section" id="work" aria-labelledby="work-title">
+        <header class="section-heading" data-reveal>
+          <div>
+            <p class="section-kicker">Selected work</p>
+            <h2 id="work-title">Products with a point of view.</h2>
+          </div>
+          <p>
+            Small, capable tools built around clear jobs, direct interfaces,
+            and infrastructure that respects the people using it.
+          </p>
+        </header>
+
+        <article class="project-card project-buffer" data-reveal>
+          <div class="project-copy">
+            <div class="project-meta">
+              <span>01 / Public utility</span>
+              <span class="project-state"><i></i> Live</span>
+            </div>
+            <div>
+              <h3>buffer<span>.lol</span></h3>
+              <p class="project-tagline">Fast, simple networking tools.</p>
+              <p class="project-description">
+                A focused browser-based toolbox for network diagnostics, web
+                checks, IP lookups, and everyday developer transforms—without
+                accounts, clutter, or mystery.
               </p>
             </div>
-          </div>
-        </section>
-
-        <section class="ai-section" aria-labelledby="ai-title" data-reveal>
-          <div class="ai-heading">
-            <p class="section-kicker">Applied AI</p>
-            <h2 id="ai-title">model-powered tools, built like products</h2>
-            <p>
-              I&apos;m building practical AI experience through projects that
-              connect language models to real workflows: clean inputs, useful
-              outputs, fast feedback, and measurable behavior.
-            </p>
+            <ul class="tag-list" aria-label="buffer.lol technologies">
+              <li>Next.js</li>
+              <li>TypeScript</li>
+              <li>Network APIs</li>
+              <li>Security boundaries</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://buffer.lol" target="_blank" rel="noreferrer">Visit site <span>↗</span></a>
+              <a href="https://github.com/1337lean/buffer.lol" target="_blank" rel="noreferrer">Source <span>↗</span></a>
+            </div>
           </div>
 
-          <div class="ai-grid" aria-label="Applied AI focus areas">
-            <article class="ai-card">
-              <p class="ai-card-index">01</p>
-              <h3>LLM interfaces</h3>
-              <p>
-                Chat and command-style interfaces that turn messy user intent
-                into clear actions, summaries, and next steps.
+          <div class="project-preview tool-preview" aria-hidden="true">
+            <div class="preview-topbar">
+              <span><i>&gt;_</i> buffer<span>.lol</span></span>
+              <span>toolbox</span>
+            </div>
+            <div class="tool-preview-body">
+              <p class="preview-label">Quick diagnostic</p>
+              <div class="diagnostic-row">
+                <span class="diagnostic-icon">dns</span>
+                <div><strong>DNS lookup</strong><small>Inspect public records for any domain</small></div>
+                <span>→</span>
+              </div>
+              <div class="diagnostic-row">
+                <span class="diagnostic-icon">tls</span>
+                <div><strong>Certificate check</strong><small>Review issuer, validity, and hostnames</small></div>
+                <span>→</span>
+              </div>
+              <div class="diagnostic-result">
+                <span class="success">✓</span>
+                <div><strong>Connection looks healthy</strong><small>HTTPS · TLS 1.3 · 18 ms</small></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card project-dash" data-reveal>
+          <div class="project-copy">
+            <div class="project-meta">
+              <span>02 / Private platform</span>
+              <span class="project-state project-state-private">◆ Self-hosted</span>
+            </div>
+            <div>
+              <h3>Buffer<span>Dash</span></h3>
+              <p class="project-tagline">First-party analytics, on your terms.</p>
+              <p class="project-description">
+                A self-hosted analytics dashboard for traffic, security, and
+                runtime signals—with multi-site tracking, private deployment,
+                and careful data handling built in.
               </p>
-            </article>
-
-            <article class="ai-card">
-              <p class="ai-card-index">02</p>
-              <h3>Retrieval workflows</h3>
-              <p>
-                Search, context packing, and document-grounded answers for small
-                knowledge bases, notes, docs, and support content.
-              </p>
-            </article>
-
-            <article class="ai-card">
-              <p class="ai-card-index">03</p>
-              <h3>Automation + evals</h3>
-              <p>
-                API-driven agents, structured outputs, and lightweight checks so
-                AI features stay useful beyond the first impressive demo.
-              </p>
-            </article>
+            </div>
+            <ul class="tag-list" aria-label="BufferDash technologies">
+              <li>Next.js</li>
+              <li>PostgreSQL</li>
+              <li>Prisma</li>
+              <li>Docker</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/1337lean/bufferdash" target="_blank" rel="noreferrer">View source <span>↗</span></a>
+            </div>
           </div>
-        </section>
 
-        <section class="stack-section" data-reveal>
-          <div class="stack-header">
-            <p class="section-kicker">Stack / toolchain</p>
-            <p>small pieces wired for speed and iteration</p>
+          <div class="project-preview dash-preview" aria-hidden="true">
+            <div class="dash-sidebar">
+              <span class="dash-brand"><i>&gt;_</i> B<span>D</span></span>
+              <span class="active"></span><span></span><span></span><span></span>
+              <span class="dash-sidebar-foot"></span>
+            </div>
+            <div class="dash-content">
+              <div class="dash-heading"><span>Overview</span><i></i></div>
+              <div class="metric-grid">
+                <div><small>Page views</small><strong>2.4k</strong><span>+12.4%</span></div>
+                <div><small>Sessions</small><strong>1.8k</strong><span>+8.1%</span></div>
+                <div><small>Live now</small><strong>12</strong><span class="live-value">● active</span></div>
+              </div>
+              <div class="chart-panel">
+                <span>Traffic / 7 days</span>
+                <div class="chart-bars">
+                  <i style="--bar: 34%"></i><i style="--bar: 52%"></i><i style="--bar: 45%"></i>
+                  <i style="--bar: 70%"></i><i style="--bar: 58%"></i><i style="--bar: 86%"></i><i style="--bar: 74%"></i>
+                </div>
+              </div>
+            </div>
           </div>
-          <ul class="stack-list" aria-label="Technology stack">
-            <li data-stack="core">Python</li>
-            <li data-stack="web">JavaScript</li>
-            <li data-stack="types">TypeScript</li>
-            <li data-stack="ui">React</li>
-            <li data-stack="runtime">Node.js</li>
-            <li data-stack="edge">APIs</li>
-            <li data-stack="ai">LLM APIs</li>
-            <li data-stack="data">RAG</li>
-            <li data-stack="quality">Evals</li>
-            <li data-stack="media">Media tooling</li>
-          </ul>
-        </section>
+        </article>
+      </section>
 
-        <footer class="site-footer" data-reveal>
-          <p>lean / 1337lean.github.io</p>
-          <nav aria-label="Footer links">
-            <a href="https://github.com/1337lean">github</a>
-            <a href="https://buffer.lol">buffer.lol</a>
-          </nav>
-        </footer>
+      <section class="approach-section" id="approach" aria-labelledby="approach-title">
+        <header class="section-heading compact" data-reveal>
+          <div>
+            <p class="section-kicker">How I build</p>
+            <h2 id="approach-title">Sharp decisions over excess.</h2>
+          </div>
+        </header>
+
+        <div class="principle-grid">
+          <article data-reveal>
+            <span>01</span>
+            <h3>Useful before clever</h3>
+            <p>Start with the real job, make the path obvious, then remove whatever does not help.</p>
+          </article>
+          <article data-reveal>
+            <span>02</span>
+            <h3>Fast feedback loops</h3>
+            <p>Ship in small steps, measure behavior, and keep performance part of the product conversation.</p>
+          </article>
+          <article data-reveal>
+            <span>03</span>
+            <h3>Responsible by default</h3>
+            <p>Build privacy, security boundaries, and predictable AI behavior into the system—not around it.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="about-copy" data-reveal>
+          <p class="section-kicker">About</p>
+          <h2 id="about-title">Developer, operator, and relentlessly curious builder.</h2>
+          <p>
+            I’m lean. I build web products and internal systems where clarity,
+            response time, and the small interaction details matter. My current
+            work spans developer tools, privacy-minded analytics, infrastructure,
+            and model-powered workflows designed to hold up after the demo.
+          </p>
+          <a href="https://github.com/1337lean" target="_blank" rel="noreferrer">More on GitHub <span>↗</span></a>
+        </div>
+
+        <div class="stack-panel" data-reveal>
+          <div class="stack-panel-header">
+            <span>lean.profile</span>
+            <span>active</span>
+          </div>
+          <dl>
+            <div><dt>Core</dt><dd>TypeScript, JavaScript, Python</dd></div>
+            <div><dt>Web</dt><dd>React, Next.js, Node.js, APIs</dd></div>
+            <div><dt>Data</dt><dd>PostgreSQL, Prisma, RAG</dd></div>
+            <div><dt>Systems</dt><dd>Docker, Linux, diagnostics</dd></div>
+            <div><dt>Applied AI</dt><dd>LLM APIs, agents, evals</dd></div>
+          </dl>
+        </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div>
+        <a class="brand" href="#top" aria-label="Back to top">
+          <span class="brand-mark" aria-hidden="true">&gt;_</span>
+          <span>le<span>an</span></span>
+        </a>
+        <p>Fast, focused software for the open web.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="https://buffer.lol" target="_blank" rel="noreferrer">buffer.lol ↗</a>
+        <a href="https://github.com/1337lean/bufferdash" target="_blank" rel="noreferrer">BufferDash ↗</a>
+        <a href="https://github.com/1337lean" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </nav>
+      <div class="footer-bottom">
+        <span>© 2026 lean</span>
+        <span>Built for the curious.</span>
+      </div>
+    </footer>
   </body>
 </html>
