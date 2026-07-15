@@ -6,14 +6,14 @@
     <meta name="color-scheme" content="dark">
     <meta
       name="description"
-      content="lean builds fast, focused software for the open web, including buffer.lol and BufferDash."
+      content="lean is a developer building focused web products, infrastructure, and practical AI tools."
     >
-    <meta name="theme-color" content="#08080d">
+    <meta name="theme-color" content="#090611">
     <title>lean — developer &amp; builder</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Sora:wght@500;600;700;800&amp;display=swap"
       rel="stylesheet"
     >
     <link rel="stylesheet" href="styles.css">
@@ -21,265 +21,262 @@
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <div class="grid-overlay" aria-hidden="true"></div>
+    <div class="ambient" aria-hidden="true">
+      <span class="ambient-orb ambient-orb-one"></span>
+      <span class="ambient-orb ambient-orb-two"></span>
+      <span class="ambient-orb ambient-orb-three"></span>
+    </div>
+    <div class="pointer-light" aria-hidden="true"></div>
 
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="lean home">
-        <span class="brand-mark" aria-hidden="true">&gt;_</span>
-        <span>le<span>an</span></span>
-      </a>
-
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#work">Work</a>
-        <a href="#approach">Approach</a>
-        <a href="#about">About</a>
+    <header class="nav-wrap">
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="logo" href="#top" aria-label="lean home">lean<span>.</span></a>
+        <div class="nav-links">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+        </div>
+        <a
+          class="nav-cta"
+          href="https://github.com/1337lean"
+          target="_blank"
+          rel="noreferrer"
+        >GitHub <span aria-hidden="true">↗</span></a>
       </nav>
-
-      <a
-        class="header-link"
-        href="https://github.com/1337lean"
-        target="_blank"
-        rel="noreferrer"
-      >GitHub <span aria-hidden="true">↗</span></a>
     </header>
 
     <main id="main-content">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero-copy" data-reveal>
-          <p class="eyebrow"><span class="status-dot"></span> Developer / builder</p>
-          <h1 id="hero-title">I build tools that <span>stay out of the way.</span></h1>
-          <p class="hero-lede">
-            Fast, focused software for the open web—from network diagnostics to
-            first-party analytics and practical AI workflows.
-          </p>
-          <div class="hero-actions">
-            <a class="primary-button" href="#work">View selected work <span>↓</span></a>
-            <a
-              class="secondary-button"
-              href="https://buffer.lol"
-              target="_blank"
-              rel="noreferrer"
-            >Open buffer.lol <span>↗</span></a>
-          </div>
-          <ul class="hero-principles" aria-label="Working principles">
-            <li><span>●</span> Open web</li>
-            <li><span>●</span> Privacy-minded</li>
-            <li><span>●</span> Useful by default</li>
-          </ul>
+        <div class="hero-status" data-intro="1">
+          <span class="status-pulse" aria-hidden="true"></span>
+          Building on the open web
         </div>
 
-        <div class="terminal" data-reveal aria-label="Project status terminal preview">
-          <div class="terminal-bar">
-            <span class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <strong>lean — projects</strong>
-            <span class="terminal-status">ready</span>
-          </div>
-          <div class="terminal-body">
-            <p><span class="prompt">➜</span> <span class="path">~</span> lean projects --status</p>
-            <div class="terminal-rule"></div>
-            <p><strong>buffer.lol</strong> <span class="terminal-live">● live</span></p>
-            <p class="terminal-muted">network + developer utilities</p>
-            <p><strong>BufferDash</strong> <span class="terminal-private">◆ self-hosted</span></p>
-            <p class="terminal-muted">first-party analytics + runtime signals</p>
-            <div class="terminal-rule"></div>
-            <p><span class="success">✓</span> systems focused · interfaces clear</p>
-            <p class="terminal-command"><span class="prompt">➜</span> <span class="path">~</span> <span class="cursor"></span></p>
-          </div>
-          <div class="terminal-foot">
-            <span><i></i> building in public</span>
-            <span>2026</span>
-          </div>
+        <h1 class="hero-wordmark" id="hero-title" aria-label="lean.">
+          <span aria-hidden="true" data-intro="2">l</span><span aria-hidden="true" data-intro="3">e</span><span aria-hidden="true" data-intro="4">a</span><span aria-hidden="true" data-intro="5">n</span><span class="wordmark-dot" aria-hidden="true" data-intro="6">.</span>
+        </h1>
+
+        <div class="hero-bottom" data-intro="7">
+          <p>
+            I design and build <em>useful digital products</em>—from developer
+            tools and infrastructure to practical AI systems.
+          </p>
+          <a class="round-link" href="#work" aria-label="See selected work">
+            <span>See work</span>
+            <i aria-hidden="true">↓</i>
+          </a>
+        </div>
+
+        <div class="hero-orbit" aria-hidden="true">
+          <span class="orbit-ring orbit-ring-one"></span>
+          <span class="orbit-ring orbit-ring-two"></span>
+          <span class="orbit-dot orbit-dot-one"></span>
+          <span class="orbit-dot orbit-dot-two"></span>
         </div>
       </section>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>Product engineering</span><i>✦</i><span>Web systems</span><i>✦</i><span>Applied AI</span><i>✦</i><span>Infrastructure</span><i>✦</i>
+          <span>Product engineering</span><i>✦</i><span>Web systems</span><i>✦</i><span>Applied AI</span><i>✦</i><span>Infrastructure</span><i>✦</i>
+        </div>
+      </div>
 
       <section class="work-section" id="work" aria-labelledby="work-title">
-        <header class="section-heading" data-reveal>
-          <div>
-            <p class="section-kicker">Selected work</p>
-            <h2 id="work-title">Products with a point of view.</h2>
-          </div>
-          <p>
-            Small, capable tools built around clear jobs, direct interfaces,
-            and infrastructure that respects the people using it.
+        <header class="section-intro" data-reveal>
+          <p class="section-label"><span>01</span> Selected work</p>
+          <h2 id="work-title">Things I’ve put<br>into the world.</h2>
+          <p class="section-summary">
+            Focused products shaped around real problems, careful systems, and
+            interfaces that make the complicated feel simple.
           </p>
         </header>
 
-        <article class="project-card project-buffer" data-reveal>
-          <div class="project-copy">
-            <div class="project-meta">
-              <span>01 / Public utility</span>
-              <span class="project-state"><i></i> Live</span>
+        <div class="project-list">
+          <article class="project-card buffer-card" data-tilt data-reveal>
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="project-head">
+              <p>01 / Open-web utility</p>
+              <span class="live-chip"><i></i> Live</span>
             </div>
-            <div>
-              <h3>buffer<span>.lol</span></h3>
-              <p class="project-tagline">Fast, simple networking tools.</p>
-              <p class="project-description">
-                A focused browser-based toolbox for network diagnostics, web
-                checks, IP lookups, and everyday developer transforms—without
-                accounts, clutter, or mystery.
-              </p>
-            </div>
-            <ul class="tag-list" aria-label="buffer.lol technologies">
-              <li>Next.js</li>
-              <li>TypeScript</li>
-              <li>Network APIs</li>
-              <li>Security boundaries</li>
-            </ul>
-            <div class="project-links">
-              <a href="https://buffer.lol" target="_blank" rel="noreferrer">Visit site <span>↗</span></a>
-              <a href="https://github.com/1337lean/buffer.lol" target="_blank" rel="noreferrer">Source <span>↗</span></a>
-            </div>
-          </div>
 
-          <div class="project-preview tool-preview" aria-hidden="true">
-            <div class="preview-topbar">
-              <span><i>&gt;_</i> buffer<span>.lol</span></span>
-              <span>toolbox</span>
+            <div class="project-art buffer-art" role="group" aria-label="buffer.lol tool capabilities">
+              <div class="buffer-console" aria-hidden="true">
+                <div class="console-top"><span><i></i> buffer.lol</span><small>toolbox online</small></div>
+                <div class="console-command"><span>›</span><strong>run</strong> quick-check</div>
+                <div class="console-response"><i></i><span>ready for input</span><em>18 ms</em></div>
+                <div class="console-tags"><span>local-first</span><span>secure requests</span></div>
+                <span class="console-scan"></span>
+              </div>
+              <button class="signal-node node-one node-tip-left" type="button" aria-describedby="dns-use">DNS<small class="node-popover" id="dns-use">Record lookup and resolver diagnostics.</small></button>
+              <button class="signal-node node-two node-tip-right" type="button" aria-describedby="tls-use">TLS<small class="node-popover" id="tls-use">Certificate issuer, validity, and hostname checks.</small></button>
+              <button class="signal-node node-three node-tip-left node-tip-up" type="button" aria-describedby="ip-use">IP<small class="node-popover" id="ip-use">Public IP, ISP, ASN, and location signals.</small></button>
+              <button class="signal-node node-four node-tip-right node-tip-up" type="button" aria-describedby="json-use">JSON<small class="node-popover" id="json-use">Local formatting and validation in the browser.</small></button>
+              <button class="signal-node node-five" type="button" aria-describedby="http-use">HTTP<small class="node-popover" id="http-use">Headers, redirects, uptime, and response checks.</small></button>
+              <button class="signal-node node-six node-tip-left" type="button" aria-describedby="asn-use">ASN<small class="node-popover" id="asn-use">Network ownership and ISP lookup.</small></button>
+              <button class="signal-node node-seven node-tip-right" type="button" aria-describedby="uuid-use">UUID<small class="node-popover" id="uuid-use">Browser-local UUID generation with no upload.</small></button>
+              <button class="signal-node node-eight node-tip-up" type="button" aria-describedby="jwt-use">JWT<small class="node-popover" id="jwt-use">Local token decoding without sending its contents away.</small></button>
+              <span class="signal-path path-one" aria-hidden="true"></span>
+              <span class="signal-path path-two" aria-hidden="true"></span>
+              <span class="signal-path path-three" aria-hidden="true"></span>
+              <span class="signal-path path-four" aria-hidden="true"></span>
+              <span class="signal-path path-five" aria-hidden="true"></span>
+              <span class="signal-path path-six" aria-hidden="true"></span>
+              <span class="signal-path path-seven" aria-hidden="true"></span>
+              <span class="signal-path path-eight" aria-hidden="true"></span>
             </div>
-            <div class="tool-preview-body">
-              <p class="preview-label">Quick diagnostic</p>
-              <div class="diagnostic-row">
-                <span class="diagnostic-icon">dns</span>
-                <div><strong>DNS lookup</strong><small>Inspect public records for any domain</small></div>
-                <span>→</span>
-              </div>
-              <div class="diagnostic-row">
-                <span class="diagnostic-icon">tls</span>
-                <div><strong>Certificate check</strong><small>Review issuer, validity, and hostnames</small></div>
-                <span>→</span>
-              </div>
-              <div class="diagnostic-result">
-                <span class="success">✓</span>
-                <div><strong>Connection looks healthy</strong><small>HTTPS · TLS 1.3 · 18 ms</small></div>
-              </div>
-            </div>
-          </div>
-        </article>
 
-        <article class="project-card project-dash" data-reveal>
-          <div class="project-copy">
-            <div class="project-meta">
-              <span>02 / Private platform</span>
-              <span class="project-state project-state-private">◆ Self-hosted</span>
-            </div>
-            <div>
-              <h3>Buffer<span>Dash</span></h3>
-              <p class="project-tagline">First-party analytics, on your terms.</p>
-              <p class="project-description">
-                A self-hosted analytics dashboard for traffic, security, and
-                runtime signals—with multi-site tracking, private deployment,
-                and careful data handling built in.
-              </p>
-            </div>
-            <ul class="tag-list" aria-label="BufferDash technologies">
-              <li>Next.js</li>
-              <li>PostgreSQL</li>
-              <li>Prisma</li>
-              <li>Docker</li>
-            </ul>
-            <div class="project-links">
-              <a href="https://github.com/1337lean/bufferdash" target="_blank" rel="noreferrer">View source <span>↗</span></a>
-            </div>
-          </div>
-
-          <div class="project-preview dash-preview" aria-hidden="true">
-            <div class="dash-sidebar">
-              <span class="dash-brand"><i>&gt;_</i> B<span>D</span></span>
-              <span class="active"></span><span></span><span></span><span></span>
-              <span class="dash-sidebar-foot"></span>
-            </div>
-            <div class="dash-content">
-              <div class="dash-heading"><span>Overview</span><i></i></div>
-              <div class="metric-grid">
-                <div><small>Page views</small><strong>2.4k</strong><span>+12.4%</span></div>
-                <div><small>Sessions</small><strong>1.8k</strong><span>+8.1%</span></div>
-                <div><small>Live now</small><strong>12</strong><span class="live-value">● active</span></div>
+            <div class="project-info">
+              <div>
+                <h3>buffer.lol</h3>
+                <p>
+                  Fast browser-based tools for network diagnostics, web checks,
+                  IP lookups, and everyday developer tasks.
+                </p>
               </div>
-              <div class="chart-panel">
-                <span>Traffic / 7 days</span>
-                <div class="chart-bars">
-                  <i style="--bar: 34%"></i><i style="--bar: 52%"></i><i style="--bar: 45%"></i>
-                  <i style="--bar: 70%"></i><i style="--bar: 58%"></i><i style="--bar: 86%"></i><i style="--bar: 74%"></i>
-                </div>
+              <ul aria-label="buffer.lol technologies">
+                <li>Next.js</li><li>TypeScript</li><li>Network APIs</li>
+              </ul>
+              <div class="project-actions">
+                <a href="https://buffer.lol" target="_blank" rel="noreferrer">Visit live <span>↗</span></a>
+                <a href="https://github.com/1337lean/buffer.lol" target="_blank" rel="noreferrer">Source <span>↗</span></a>
               </div>
             </div>
-          </div>
-        </article>
-      </section>
-
-      <section class="approach-section" id="approach" aria-labelledby="approach-title">
-        <header class="section-heading compact" data-reveal>
-          <div>
-            <p class="section-kicker">How I build</p>
-            <h2 id="approach-title">Sharp decisions over excess.</h2>
-          </div>
-        </header>
-
-        <div class="principle-grid">
-          <article data-reveal>
-            <span>01</span>
-            <h3>Useful before clever</h3>
-            <p>Start with the real job, make the path obvious, then remove whatever does not help.</p>
           </article>
-          <article data-reveal>
-            <span>02</span>
-            <h3>Fast feedback loops</h3>
-            <p>Ship in small steps, measure behavior, and keep performance part of the product conversation.</p>
-          </article>
-          <article data-reveal>
-            <span>03</span>
-            <h3>Responsible by default</h3>
-            <p>Build privacy, security boundaries, and predictable AI behavior into the system—not around it.</p>
+
+          <article class="project-card dash-card" data-tilt data-reveal>
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="project-head">
+              <p>02 / Analytics platform</p>
+              <span>Self-hosted</span>
+            </div>
+
+            <div class="project-art dash-art" aria-hidden="true">
+              <div class="data-sphere">
+                <span class="sphere-glow"></span>
+                <span class="sphere-grid"></span>
+                <span class="radar-ticks"></span>
+                <span class="radar-crosshair crosshair-horizontal"></span>
+                <span class="radar-crosshair crosshair-vertical"></span>
+                <span class="radar-sweep"></span>
+                <span class="radar-center"></span>
+                <span class="radar-label radar-north">N</span>
+                <span class="radar-label radar-east">E</span>
+                <span class="radar-label radar-south">S</span>
+                <span class="radar-label radar-west">W</span>
+                <span class="radar-ping ping-green ping-one"></span>
+                <span class="radar-ping ping-red ping-two"></span>
+                <span class="radar-ping ping-green ping-three"></span>
+                <span class="radar-ping ping-red ping-four"></span>
+                <span class="radar-ping ping-green ping-five"></span>
+              </div>
+              <div class="data-card data-card-one"><small>Live visitors</small><strong>12</strong><i>+4</i></div>
+              <div class="data-card data-card-two"><small>Traffic quality</small><strong>98%</strong><i>healthy</i></div>
+              <div class="data-card data-card-three"><small>Events / 24h</small><strong>2.4k</strong><i>+12%</i></div>
+              <div class="data-card data-card-four"><small>Sites online</small><strong>3</strong><i>all healthy</i></div>
+              <div class="data-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <h3>BufferDash</h3>
+                <p>
+                  First-party web analytics for traffic, security, and runtime
+                  signals—privately operated at dash.buffer.lol.
+                </p>
+              </div>
+              <ul aria-label="BufferDash technologies">
+                <li>Next.js</li><li>PostgreSQL</li><li>Docker</li>
+              </ul>
+              <div class="project-actions">
+                <a href="https://github.com/1337lean/bufferdash" target="_blank" rel="noreferrer">View source <span>↗</span></a>
+              </div>
+            </div>
           </article>
         </div>
       </section>
 
       <section class="about-section" id="about" aria-labelledby="about-title">
-        <div class="about-copy" data-reveal>
-          <p class="section-kicker">About</p>
-          <h2 id="about-title">Developer, operator, and relentlessly curious builder.</h2>
-          <p>
-            I’m lean. I build web products and internal systems where clarity,
-            response time, and the small interaction details matter. My current
-            work spans developer tools, privacy-minded analytics, infrastructure,
-            and model-powered workflows designed to hold up after the demo.
-          </p>
-          <a href="https://github.com/1337lean" target="_blank" rel="noreferrer">More on GitHub <span>↗</span></a>
+        <div class="about-heading" data-reveal>
+          <p class="section-label"><span>02</span> About</p>
+          <h2 id="about-title">Curious by nature.<br><em>Intentional</em> by design.</h2>
         </div>
 
-        <div class="stack-panel" data-reveal>
-          <div class="stack-panel-header">
-            <span>lean.profile</span>
-            <span>active</span>
+        <div class="about-layout">
+          <div class="about-copy" data-reveal>
+            <p class="about-lede">
+              I’m lean, a developer who likes turning fuzzy ideas into direct,
+              dependable software.
+            </p>
+            <p>
+              My work sits where product thinking meets engineering: useful web
+              tools, privacy-minded infrastructure, and model-powered workflows
+              that hold up beyond the first demo. I care about speed, clarity,
+              and the quiet details that make a product feel considered.
+            </p>
+            <a href="https://github.com/1337lean" target="_blank" rel="noreferrer">Explore my GitHub <span>↗</span></a>
           </div>
-          <dl>
-            <div><dt>Core</dt><dd>TypeScript, JavaScript, Python</dd></div>
-            <div><dt>Web</dt><dd>React, Next.js, Node.js, APIs</dd></div>
-            <div><dt>Data</dt><dd>PostgreSQL, Prisma, RAG</dd></div>
-            <div><dt>Systems</dt><dd>Docker, Linux, diagnostics</dd></div>
-            <div><dt>Applied AI</dt><dd>LLM APIs, agents, evals</dd></div>
-          </dl>
+
+          <div class="capability-board" data-reveal aria-label="Interactive capabilities">
+            <div class="board-header">
+              <span><i></i> Current toolkit</span>
+              <small>08 capabilities · hover or tap</small>
+            </div>
+            <div class="capability-grid">
+              <button class="skill-tile tile-wide tile-typescript" type="button" aria-describedby="typescript-detail">
+                <span class="tile-top"><i>TS</i><b>01</b></span><strong>TypeScript</strong><em>Product systems</em>
+                <small id="typescript-detail">Typed interfaces across buffer.lol and BufferDash.</small>
+              </button>
+              <button class="skill-tile tile-python" type="button" aria-describedby="python-detail">
+                <span class="tile-top"><i>py</i><b>02</b></span><strong>Python</strong><em>Automation</em>
+                <small id="python-detail">Diagnostics, scripts, and backend tooling.</small>
+              </button>
+              <button class="skill-tile tile-react" type="button" aria-describedby="react-detail">
+                <span class="tile-top"><i>↻</i><b>03</b></span><strong>React</strong><em>Interfaces</em>
+                <small id="react-detail">Interactive product and dashboard views.</small>
+              </button>
+              <button class="skill-tile tile-node" type="button" aria-describedby="node-detail">
+                <span class="tile-top"><i>js</i><b>04</b></span><strong>Node.js</strong><em>Runtime</em>
+                <small id="node-detail">APIs, server logic, and request pipelines.</small>
+              </button>
+              <button class="skill-tile tile-wide tile-postgres" type="button" aria-describedby="postgres-detail">
+                <span class="tile-top"><i>db</i><b>05</b></span><strong>PostgreSQL</strong><em>Data systems</em>
+                <small id="postgres-detail">Multi-site analytics data inside BufferDash.</small>
+              </button>
+              <button class="skill-tile tile-llm" type="button" aria-describedby="llm-detail">
+                <span class="tile-top"><i>ai</i><b>06</b></span><strong>LLM APIs</strong><em>Applied AI</em>
+                <small id="llm-detail">Agents, retrieval, and structured outputs.</small>
+              </button>
+              <button class="skill-tile tile-wide tile-docker" type="button" aria-describedby="docker-detail">
+                <span class="tile-top"><i>◈</i><b>07</b></span><strong>Docker</strong><em>Infrastructure</em>
+                <small id="docker-detail">Repeatable VPS deployments and isolated services.</small>
+              </button>
+              <button class="skill-tile tile-wide tile-evals" type="button" aria-describedby="evals-detail">
+                <span class="tile-top"><i>✓</i><b>08</b></span><strong>Evals</strong><em>AI quality</em>
+                <small id="evals-detail">Checks that keep AI workflows predictable.</small>
+              </button>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <section class="closing-section" aria-label="Closing statement">
+        <p data-reveal>Always exploring the space between</p>
+        <h2 data-reveal>“What if?” <span>and</span> “It works.”</h2>
+        <a class="closing-link" href="https://github.com/1337lean" target="_blank" rel="noreferrer" data-reveal>
+          <span>See what I’m building</span><i aria-hidden="true">↗</i>
+        </a>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div>
-        <a class="brand" href="#top" aria-label="Back to top">
-          <span class="brand-mark" aria-hidden="true">&gt;_</span>
-          <span>le<span>an</span></span>
-        </a>
-        <p>Fast, focused software for the open web.</p>
-      </div>
+      <a class="logo" href="#top" aria-label="Back to top">lean<span>.</span></a>
+      <p>Building useful things for the internet.</p>
       <nav aria-label="Footer navigation">
         <a href="https://buffer.lol" target="_blank" rel="noreferrer">buffer.lol ↗</a>
         <a href="https://github.com/1337lean/bufferdash" target="_blank" rel="noreferrer">BufferDash ↗</a>
         <a href="https://github.com/1337lean" target="_blank" rel="noreferrer">GitHub ↗</a>
       </nav>
-      <div class="footer-bottom">
-        <span>© 2026 lean</span>
-        <span>Built for the curious.</span>
-      </div>
+      <div class="footer-meta"><span>© 2026 lean</span><span>Built with curiosity.</span></div>
     </footer>
   </body>
 </html>

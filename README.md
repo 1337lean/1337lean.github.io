@@ -2,10 +2,11 @@
 
 Personal GitHub Pages site for lean.
 
-The site is a product-led developer portfolio built around lean's work on
-buffer.lol and BufferDash. Its design language shares the restrained dark
-surfaces, violet accents, terminal details, and product-first tone of those
-projects.
+The site is an animated developer portfolio built around lean's work on
+buffer.lol and BufferDash. It uses its own cinematic purple identity with
+oversized typography, ambient light, editorial project stories, and smooth
+motion that remains respectful of reduced-motion preferences. Its interactive
+capability board connects each technology to concrete project experience.
 
 Live site: <https://1337lean.github.io>
 
@@ -31,8 +32,8 @@ Then visit <http://localhost:8000>.
 
 ```text
 index.html   Page structure and content
-styles.css   Shared Buffer-inspired visual system and responsive layout
-script.js    Lightweight progressive reveal behavior
+styles.css   Distinctive purple visual system, responsive layout, and motion
+script.js    Progressive reveals, ambient pointer light, and subtle card depth
 README.md    Project notes
 ```
 
