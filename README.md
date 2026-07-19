@@ -2,11 +2,16 @@
 
 Personal GitHub Pages site for lean.
 
-The site is an animated developer portfolio built around lean's work on
-buffer.lol and BufferDash. It uses its own cinematic purple identity with
+The site is an animated developer portfolio featuring lean's work on
+buffer.lol and IP Lens. It uses its own cinematic purple identity with
 oversized typography, ambient light, editorial project stories, and smooth
 motion that remains respectful of reduced-motion preferences. Its interactive
 capability board connects each technology to concrete project experience.
+
+## Projects
+
+- [buffer.lol](https://buffer.lol) — browser-based network diagnostics and developer tools
+- [IP Lens](https://buffer.lol/ip-lens) — a privacy-focused native iPhone toolkit for IP intelligence
 
 Live site: <https://1337lean.github.io>
 
@@ -31,10 +36,11 @@ Then visit <http://localhost:8000>.
 ## Files
 
 ```text
-index.html   Page structure and content
-styles.css   Distinctive purple visual system, responsive layout, and motion
-script.js    Progressive reveals, ambient pointer light, and subtle card depth
-README.md    Project notes
+index.html        Page structure and content
+styles.css        Distinctive purple visual system, responsive layout, and motion
+script.js         Progressive reveals, ambient pointer light, and subtle card depth
+assets/ip-lens/   Optimized IP Lens app imagery
+README.md         Project notes
 ```
 
 ## Deployment
