@@ -240,28 +240,6 @@ main,
   isolation: isolate;
 }
 
-.hero-status {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  width: max-content;
-  margin: 0 auto 1rem;
-  color: var(--muted);
-  font-size: 0.67rem;
-  font-weight: 600;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-
-.status-pulse {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--mint);
-  box-shadow: 0 0 0 0 rgba(129, 243, 197, 0.45);
-  animation: status-pulse 2.6s ease-out infinite;
-}
-
 .hero-wordmark {
   display: flex;
   justify-content: center;
@@ -1491,7 +1469,7 @@ main,
 
 .site-footer {
   display: grid;
-  grid-template-columns: 0.6fr 1fr 1fr;
+  grid-template-columns: 0.6fr 2fr;
   align-items: center;
   gap: 2rem;
   padding: 2.5rem 0;
@@ -1517,7 +1495,6 @@ main,
 @keyframes drift-one { to { transform: translate(7rem, 5rem) scale(1.12); } }
 @keyframes drift-two { to { transform: translate(8rem, -5rem) scale(0.92); } }
 @keyframes drift-three { to { transform: translate(-9rem, -7rem) scale(1.1); } }
-@keyframes status-pulse { 70%, 100% { box-shadow: 0 0 0 9px rgba(129, 243, 197, 0); } }
 @keyframes orbit-dot { 50% { transform: translate(670px, 30px) scale(1.4); } }
 @keyframes orbit-dot-two { 50% { transform: translate(-650px, 90px) scale(0.8); } }
 @keyframes ticker { to { transform: translateX(calc(-50% - 1.1rem)); } }
@@ -1576,7 +1553,6 @@ main,
   .about-layout { margin-top: 3.5rem; }
   .capability-grid { grid-auto-rows: 108px; }
   .site-footer { grid-template-columns: 1fr 1fr; }
-  .site-footer > p { text-align: right; }
   .site-footer nav { grid-column: 1 / -1; justify-content: flex-start; }
 }
 
@@ -1585,7 +1561,6 @@ main,
   .nav-shell { min-height: 56px; padding-left: 1rem; }
   .nav-cta { min-height: 38px; padding-inline: 0.85rem; }
   .hero { min-height: 92svh; }
-  .hero-status { margin-bottom: 1.5rem; font-size: 0.58rem; }
   .hero-wordmark { font-size: clamp(6.4rem, 29vw, 8.6rem); }
   .hero-bottom { grid-template-columns: 1fr; justify-items: start; }
   .round-link { width: 104px; height: 104px; }
@@ -1636,7 +1611,6 @@ main,
   .skill-tile { padding: 0.72rem; border-radius: 14px; }
   .skill-tile > small { right: 0.72rem; bottom: 0.62rem; left: 0.72rem; font-size: 0.48rem; }
   .site-footer { grid-template-columns: 1fr; }
-  .site-footer > p { text-align: left; }
   .site-footer nav { grid-column: auto; flex-wrap: wrap; }
   .footer-meta { align-items: flex-start; flex-direction: column; gap: 0.5rem; }
 }
