@@ -1468,14 +1468,17 @@ main,
 .closing-link:hover { border-color: rgba(197, 169, 255, 0.36); background: rgba(156, 114, 255, 0.11); transform: translateY(-3px); }
 
 .site-footer {
+  padding-bottom: 2.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--faint);
+  font-size: 0.68rem;
+}
+
+.footer-bar {
   display: grid;
   grid-template-columns: 0.6fr 2fr;
   align-items: center;
   gap: 2rem;
-  padding: 2.5rem 0;
-  border-top: 1px solid var(--line);
-  color: var(--faint);
-  font-size: 0.68rem;
 }
 
 .site-footer nav { display: flex; justify-content: flex-end; gap: 1.4rem; color: var(--muted); }
@@ -1552,7 +1555,7 @@ main,
   .ip-phone img { border-radius: 30px; }
   .about-layout { margin-top: 3.5rem; }
   .capability-grid { grid-auto-rows: 108px; }
-  .site-footer { grid-template-columns: 1fr 1fr; }
+  .footer-bar { grid-template-columns: 1fr 1fr; }
   .site-footer nav { grid-column: 1 / -1; justify-content: flex-start; }
 }
 
@@ -1610,7 +1613,7 @@ main,
   .tile-wide { grid-column: span 2; }
   .skill-tile { padding: 0.72rem; border-radius: 14px; }
   .skill-tile > small { right: 0.72rem; bottom: 0.62rem; left: 0.72rem; font-size: 0.48rem; }
-  .site-footer { grid-template-columns: 1fr; }
+  .footer-bar { grid-template-columns: 1fr; }
   .site-footer nav { grid-column: auto; flex-wrap: wrap; }
   .footer-meta { align-items: flex-start; flex-direction: column; gap: 0.5rem; }
 }
