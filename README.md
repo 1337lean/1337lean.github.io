@@ -3,7 +3,7 @@
 Personal GitHub Pages site for lean.
 
 The site is an animated developer portfolio featuring lean's work on
-buffer.lol and IP Lens. It uses its own cinematic purple identity with
+buffer.lol, 7331.cloud, and IP Lens. It uses its own cinematic purple identity with
 oversized typography, ambient light, editorial project stories, and smooth
 motion that remains respectful of reduced-motion preferences. Its interactive
 capability board connects each technology to concrete project experience.
@@ -11,6 +11,7 @@ capability board connects each technology to concrete project experience.
 ## Projects
 
 - [buffer.lol](https://buffer.lol) — browser-based network diagnostics and developer tools
+- [7331.cloud](https://7331.cloud) — an in-development image and file hosting platform
 - [IP Lens](https://buffer.lol/ip-lens) — a privacy-focused native iPhone toolkit for IP intelligence
 
 Live site: <https://1337lean.github.io>
