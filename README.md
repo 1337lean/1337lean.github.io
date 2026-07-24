@@ -11,7 +11,7 @@ capability board connects each technology to concrete project experience.
 ## Projects
 
 - [buffer.lol](https://buffer.lol) — browser-based network diagnostics and developer tools
-- [7331.cloud](https://7331.cloud) — an in-development image and file hosting platform
+- [7331.cloud](https://7331.cloud) — anonymous image hosting with short retention and a companion [Go CLI](https://github.com/1337lean/7331-cli)
 - [IP Lens](https://buffer.lol/ip-lens) — a privacy-focused native iPhone toolkit for IP intelligence
 
 Live site: <https://1337lean.github.io>
