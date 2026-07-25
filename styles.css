@@ -1554,6 +1554,22 @@ main,
 .closing-link i { display: grid; width: 40px; height: 40px; place-items: center; border-radius: 50%; color: #160c26; background: var(--lilac); font-style: normal; }
 .closing-link:hover { border-color: rgba(197, 169, 255, 0.36); background: rgba(156, 114, 255, 0.11); transform: translateY(-3px); }
 
+.closing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  margin: 3rem auto 0;
+  width: max-content;
+  max-width: 100%;
+}
+
+.closing-actions .closing-link { margin: 0; }
+
+.closing-link-contact i { background: var(--purple); color: #fff; }
+.closing-link-contact:hover { border-color: rgba(156, 114, 255, 0.5); background: rgba(156, 114, 255, 0.14); }
+
 .site-footer {
   padding-bottom: 2.5rem;
   border-top: 1px solid var(--line);
