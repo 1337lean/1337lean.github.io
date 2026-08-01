@@ -517,6 +517,15 @@ main,
   background: #3c8dff;
   box-shadow: 0 0 12px rgba(72, 145, 255, 0.7);
 }
+.beta-chip { display: inline-flex; align-items: center; gap: 0.5rem; }
+.beta-chip i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #68e5ff;
+  box-shadow: 0 0 12px rgba(85, 221, 255, 0.82);
+  animation: beta-pulse 2.2s ease-in-out infinite;
+}
 
 .project-art {
   display: grid;
@@ -1123,6 +1132,139 @@ main,
 .ip-orbit-one { width: 74%; aspect-ratio: 1; transform: rotate(-19deg) scaleY(0.44); animation: ip-orbit 18s linear infinite; }
 .ip-orbit-two { width: 92%; aspect-ratio: 1; border-color: rgba(123, 88, 255, 0.15); transform: rotate(26deg) scaleY(0.38); animation: ip-orbit-two 22s linear infinite; }
 
+.neon-tether-card {
+  background:
+    linear-gradient(145deg, rgba(54, 14, 76, 0.78), rgba(8, 13, 35, 0.88)),
+    var(--surface);
+}
+
+.neon-tether-card .card-glow {
+  background: radial-gradient(520px circle at var(--card-x, 50%) var(--card-y, 50%), rgba(255, 49, 208, 0.19), transparent 58%);
+}
+
+.neon-tether-art {
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 22% 36%, rgba(255, 27, 198, 0.25), transparent 34%),
+    radial-gradient(circle at 78% 66%, rgba(26, 205, 255, 0.24), transparent 38%),
+    linear-gradient(145deg, rgba(16, 5, 33, 0.96), rgba(3, 12, 31, 0.96));
+}
+
+.neon-tether-art::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.52) 0 1px, transparent 1.4px),
+    radial-gradient(circle, rgba(94, 221, 255, 0.4) 0 1px, transparent 1.4px);
+  background-position: 0 0, 22px 25px;
+  background-size: 49px 49px, 67px 67px;
+  opacity: 0.18;
+  mask-image: radial-gradient(circle at center, black, transparent 85%);
+}
+
+.neon-tether-art::after {
+  position: absolute;
+  bottom: -18%;
+  left: -8%;
+  z-index: -1;
+  width: 68%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #ee20be;
+  content: "";
+  filter: blur(100px);
+  opacity: 0.2;
+}
+
+.neon-phone {
+  position: relative;
+  z-index: 4;
+  height: 490px;
+  aspect-ratio: 644 / 1400;
+  overflow: hidden;
+  padding: 5px;
+  border: 1px solid rgba(169, 226, 255, 0.35);
+  border-radius: 42px;
+  background: linear-gradient(150deg, #5f316b, #090713 18%, #03050d 82%, #14506c);
+  box-shadow:
+    0 34px 80px rgba(0, 0, 0, 0.58),
+    -12px 0 65px rgba(255, 26, 205, 0.18),
+    14px 0 65px rgba(17, 205, 255, 0.18),
+    inset 0 1px 1px rgba(255, 255, 255, 0.23);
+  transform: translateX(-10%);
+  animation: neon-phone-float 8s ease-in-out infinite;
+}
+
+.neon-phone img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 36px;
+  object-fit: cover;
+}
+
+.neon-icon-card {
+  position: absolute;
+  top: 16%;
+  right: 6%;
+  z-index: 6;
+  display: flex;
+  width: 198px;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem;
+  border: 1px solid rgba(240, 138, 255, 0.28);
+  border-radius: 22px;
+  background: rgba(24, 7, 38, 0.77);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.42), 0 0 42px rgba(248, 29, 197, 0.18);
+  backdrop-filter: blur(18px) saturate(1.25);
+  animation: icon-float 7s ease-in-out infinite -1.5s;
+}
+
+.neon-icon-card img {
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 15px;
+  box-shadow: 0 11px 30px rgba(30, 183, 255, 0.22), 0 0 28px rgba(255, 24, 205, 0.18);
+}
+
+.neon-icon-card span { min-width: 0; }
+.neon-icon-card strong,
+.neon-icon-card small { display: block; }
+.neon-icon-card strong { font-family: var(--font-display); font-size: 0.75rem; font-weight: 600; }
+.neon-icon-card small { margin-top: 0.28rem; color: #79e7ff; font-size: 0.48rem; }
+
+.neon-feature {
+  position: absolute;
+  z-index: 5;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid rgba(101, 222, 255, 0.24);
+  border-radius: 999px;
+  color: #b9f4ff;
+  background: rgba(7, 17, 38, 0.76);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.32);
+  font-size: 0.53rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  backdrop-filter: blur(14px);
+}
+
+.neon-feature-one { top: 8%; left: 6%; animation: feature-float 6.5s ease-in-out infinite -2s; }
+.neon-feature-two { right: 8%; bottom: 11%; border-color: rgba(255, 104, 221, 0.25); color: #ffc5f1; animation: feature-float 7.5s ease-in-out infinite -4s; }
+
+.neon-orbit {
+  position: absolute;
+  z-index: 1;
+  border: 1px solid rgba(255, 88, 219, 0.18);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.neon-orbit-one { width: 76%; aspect-ratio: 1; transform: rotate(23deg) scaleY(0.38); animation: neon-orbit 19s linear infinite; }
+.neon-orbit-two { width: 96%; aspect-ratio: 1; border-color: rgba(70, 210, 255, 0.17); transform: rotate(-28deg) scaleY(0.34); animation: neon-orbit-two 24s linear infinite; }
+
 .dash-art { background: radial-gradient(circle at 52% 45%, rgba(78, 105, 230, 0.19), transparent 36%), rgba(8, 6, 18, 0.55); }
 
 .data-sphere {
@@ -1539,6 +1681,10 @@ main,
 @keyframes feature-float { 50% { transform: translateY(-7px); } }
 @keyframes ip-orbit { to { transform: rotate(341deg) scaleY(0.44); } }
 @keyframes ip-orbit-two { to { transform: rotate(-334deg) scaleY(0.38); } }
+@keyframes beta-pulse { 50% { opacity: 0.45; transform: scale(0.82); } }
+@keyframes neon-phone-float { 50% { transform: translate(-10%, -8px) rotate(-0.6deg); } }
+@keyframes neon-orbit { to { transform: rotate(383deg) scaleY(0.38); } }
+@keyframes neon-orbit-two { to { transform: rotate(-388deg) scaleY(0.34); } }
 @keyframes sphere-float { 50% { transform: translateY(-12px) rotate(2deg); } }
 @keyframes data-float { 50% { transform: translateY(-10px) rotate(1deg); } }
 @keyframes wave { to { height: 95%; } }
@@ -1579,6 +1725,8 @@ main,
   .cloud-preview { width: min(86%, 510px); }
   .ip-phone { height: min(91%, 390px); border-radius: 36px; }
   .ip-phone img { border-radius: 30px; }
+  .neon-phone { height: min(91%, 390px); border-radius: 36px; }
+  .neon-phone img { border-radius: 30px; }
   .about-layout { margin-top: 3.5rem; }
   .capability-grid { grid-auto-rows: 108px; }
   .footer-bar { grid-template-columns: 1fr; }
@@ -1624,6 +1772,15 @@ main,
   .ip-feature { padding: 0.45rem 0.55rem; font-size: 0.45rem; }
   .ip-feature-one { top: 7%; right: 3%; }
   .ip-feature-two { right: 3%; bottom: 8%; }
+  .neon-phone { height: 325px; padding: 4px; border-radius: 31px; transform: translateX(-9%); }
+  .neon-phone img { border-radius: 26px; }
+  .neon-icon-card { top: 16%; right: 3%; width: 151px; gap: 0.55rem; padding: 0.5rem; border-radius: 17px; }
+  .neon-icon-card img { width: 48px; height: 48px; border-radius: 11px; }
+  .neon-icon-card strong { font-size: 0.61rem; }
+  .neon-icon-card small { font-size: 0.39rem; }
+  .neon-feature { padding: 0.45rem 0.55rem; font-size: 0.45rem; }
+  .neon-feature-one { top: 7%; left: 3%; }
+  .neon-feature-two { right: 3%; bottom: 8%; }
   .data-card-three, .data-card-four { display: none; }
   .data-sphere { width: 205px; height: 205px; }
   .data-card { min-width: 110px; padding: 0.7rem; }
@@ -1660,4 +1817,5 @@ main,
 
   .pointer-light { display: none; }
   .ip-phone { transform: translateX(12%); }
+  .neon-phone { transform: translateX(-10%); }
 }
