@@ -403,6 +403,124 @@ main,
 
 .ticker-track i { color: var(--purple); font-style: normal; }
 
+.reel-shell {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 1.2rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background: #08050e;
+  box-shadow: 0 35px 100px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  isolation: isolate;
+  transition: border-color 300ms ease, box-shadow 300ms ease;
+}
+
+.reel-shell:hover,
+.reel-shell:focus-within {
+  border-color: rgba(197, 169, 255, 0.28);
+  box-shadow: 0 45px 130px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.reel-shell::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  border-radius: inherit;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), inset 0 0 70px rgba(8, 5, 14, 0.14);
+  pointer-events: none;
+}
+
+.reel-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reel-chrome {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  opacity: 0.42;
+  pointer-events: none;
+  transform: translateY(5px);
+  transition: opacity 220ms ease, transform 260ms var(--ease);
+}
+
+.reel-shell:hover .reel-chrome,
+.reel-shell:focus-within .reel-chrome {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reel-duration,
+.reel-control {
+  min-height: 40px;
+  border: 1px solid rgba(225, 210, 255, 0.17);
+  border-radius: 999px;
+  color: rgba(248, 244, 255, 0.82);
+  background: rgba(8, 5, 14, 0.72);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.reel-duration {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0 0.85rem;
+  text-transform: uppercase;
+}
+
+.reel-duration i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--purple-bright);
+  box-shadow: 0 0 12px rgba(197, 169, 255, 0.75);
+}
+
+.reel-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: color 180ms ease, border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.reel-control:hover {
+  color: #fff;
+  border-color: rgba(197, 169, 255, 0.34);
+  background: rgba(25, 18, 42, 0.86);
+  transform: translateY(-1px);
+}
+
+.reel-control:focus-visible {
+  outline: 2px solid var(--purple-bright);
+  outline-offset: 4px;
+}
+
+.reel-control [data-reel-control-icon] {
+  color: var(--purple-bright);
+  font-size: 0.72rem;
+  letter-spacing: -0.12em;
+}
+
 .work-section,
 .about-section {
   padding: clamp(7rem, 13vw, 11rem) 0;
@@ -1716,6 +1834,7 @@ main,
   .hero-bottom { grid-template-columns: 1fr auto; gap: 2rem; margin-top: 3rem; }
   .round-link { width: 96px; height: 96px; }
   .section-intro, .about-heading, .about-layout { grid-template-columns: 1fr; }
+  .reel-shell { border-radius: 22px; }
   .section-summary { grid-column: auto; }
   .section-intro { gap: 1.5rem; }
   .project-card { padding: 0.8rem; border-radius: 22px; transform: none !important; }
@@ -1743,6 +1862,10 @@ main,
   .round-link { width: 104px; height: 104px; }
   .ticker-track { min-height: 58px; }
   .work-section, .about-section { padding: 6rem 0; }
+  .reel-shell { border-radius: 17px; }
+  .reel-chrome { right: 0.55rem; bottom: 0.55rem; left: 0.55rem; }
+  .reel-duration { display: none; }
+  .reel-control { min-height: 36px; margin-left: auto; padding-inline: 0.75rem; }
   .section-intro h2, .about-heading h2, .closing-section h2 { font-size: clamp(2.8rem, 14vw, 4.3rem); }
   .project-art { min-height: 360px; }
   .buffer-preview { width: 94%; min-height: 310px; padding: 0.85rem; border-radius: 14px; }
@@ -1797,6 +1920,13 @@ main,
   .skill-tile > small { right: 0.72rem; bottom: 0.62rem; left: 0.72rem; font-size: 0.48rem; }
   .site-footer nav { flex-wrap: wrap; }
   .footer-meta { align-items: flex-start; flex-direction: column; gap: 0.5rem; }
+}
+
+@media (hover: none) {
+  .reel-chrome {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
