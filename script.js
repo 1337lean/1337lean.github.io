@@ -5,15 +5,9 @@ const nav = document.querySelector(".nav-shell");
 const revealTargets = document.querySelectorAll("[data-reveal]");
 const tiltTargets = document.querySelectorAll("[data-tilt]");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const reelVideo = document.querySelector("[data-reel-video]");
-const reelControl = document.querySelector("[data-reel-control]");
-const reelControlIcon = document.querySelector("[data-reel-control-icon]");
-const reelControlLabel = document.querySelector("[data-reel-control-label]");
 
 let pointerFrame = 0;
 let scrollFrame = 0;
-let reelInView = false;
-let reelManuallyPaused = false;
 
 window.requestAnimationFrame(() => document.body.classList.add("is-ready"));
 
@@ -87,57 +81,4 @@ reducedMotion.addEventListener("change", () => {
     card.style.setProperty("--tilt-x", "0deg");
     card.style.setProperty("--tilt-y", "0deg");
   });
-
-  if (reducedMotion.matches) {
-    reelVideo?.pause();
-  } else if (reelInView && !reelManuallyPaused) {
-    reelVideo?.play().catch(() => {});
-  }
-
-  syncReelControl();
 });
-
-function syncReelControl() {
-  if (!reelVideo || !reelControl || !reelControlIcon || !reelControlLabel) return;
-
-  const isPaused = reelVideo.paused;
-  reelControl.setAttribute("aria-label", `${isPaused ? "Play" : "Pause"} portfolio reel`);
-  reelControlIcon.textContent = isPaused ? "▶" : "Ⅱ";
-  reelControlLabel.textContent = isPaused ? "Play reel" : "Pause reel";
-}
-
-if (reelVideo && reelControl) {
-  if (reducedMotion.matches) reelVideo.pause();
-
-  reelVideo.addEventListener("play", syncReelControl);
-  reelVideo.addEventListener("pause", syncReelControl);
-
-  reelControl.addEventListener("click", () => {
-    if (reelVideo.paused) {
-      reelManuallyPaused = false;
-      reelVideo.play().catch(() => {});
-    } else {
-      reelManuallyPaused = true;
-      reelVideo.pause();
-    }
-  });
-
-  if ("IntersectionObserver" in window) {
-    const reelObserver = new IntersectionObserver(
-      ([entry]) => {
-        reelInView = entry.isIntersecting;
-
-        if (!reelInView) {
-          reelVideo.pause();
-        } else if (!reducedMotion.matches && !reelManuallyPaused) {
-          reelVideo.play().catch(() => {});
-        }
-      },
-      { threshold: 0.28 },
-    );
-
-    reelObserver.observe(reelVideo);
-  }
-
-  syncReelControl();
-}

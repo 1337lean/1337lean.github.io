@@ -6,9 +6,8 @@ The site is an animated developer portfolio featuring lean's work on
 buffer.lol, 7331.cloud, IP Lens, and Neon Tether. It uses its own cinematic
 purple identity with oversized typography, ambient light, editorial project
 stories, and smooth motion that remains respectful of reduced-motion
-preferences. A twelve-second Remotion reel connects the projects into one
-visual story, while the interactive capability board ties each technology to
-concrete experience.
+preferences. Its interactive capability board connects each technology to
+concrete project experience.
 
 ## Projects
 
@@ -23,7 +22,6 @@ Live site: <https://1337lean.github.io>
 - HTML
 - CSS
 - JavaScript
-- Remotion (pre-rendered WebM and MP4)
 - GitHub Pages
 - Responsive, accessible product previews
 
@@ -44,22 +42,7 @@ index.html        Page structure and content
 styles.css        Distinctive purple visual system, responsive layout, and motion
 script.js         Progressive reveals, ambient pointer light, and subtle card depth
 assets/ip-lens/   Optimized IP Lens app imagery
-assets/reel/      Rendered video, fallback, and poster used by the home page
-portfolio-reel/   Editable Remotion composition and render scripts
 README.md         Project notes
-```
-
-## Portfolio reel
-
-The browser only downloads static video assets; React and Remotion are not
-included in the production page. To edit or re-render the reel:
-
-```bash
-cd portfolio-reel
-npm install
-npm run dev
-# or generate every site asset
-npm run render:site
 ```
 
 ## Deployment
