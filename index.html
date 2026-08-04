@@ -1,20 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="dark">
+    <meta name="color-scheme" content="dark light">
     <meta
       name="description"
       content="lean is a developer building focused web tools, infrastructure, and native iPhone apps."
     >
-    <meta name="theme-color" content="#090611">
+    <meta name="theme-color" content="#0a0a0a">
     <title>lean — developer &amp; builder</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Sora:wght@500;600;700;800&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap"
       rel="stylesheet"
     >
     <link rel="stylesheet" href="styles.css">
@@ -22,397 +22,240 @@
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <div class="ambient" aria-hidden="true">
-      <span class="ambient-orb ambient-orb-one"></span>
-      <span class="ambient-orb ambient-orb-two"></span>
-      <span class="ambient-orb ambient-orb-three"></span>
-    </div>
-    <div class="pointer-light" aria-hidden="true"></div>
 
-    <header class="nav-wrap">
-      <nav class="nav-shell" aria-label="Primary navigation">
-        <a class="logo" href="#top" aria-label="lean home">lean<span>.</span></a>
-        <div class="nav-links">
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="#top" aria-label="lean, back to top">
+          <span class="brand-mark" aria-hidden="true">l/</span>
+          <span>lean</span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Primary navigation">
           <a href="#work">Work</a>
           <a href="#about">About</a>
-        </div>
-        <a
-          class="nav-cta"
-          href="https://github.com/1337lean"
-          target="_blank"
-          rel="noreferrer"
-        >GitHub <span aria-hidden="true">↗</span></a>
-      </nav>
+          <a href="#connect">Connect</a>
+        </nav>
+
+        <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+          <span aria-hidden="true">Light</span>
+        </button>
+      </div>
     </header>
 
-    <main id="main-content">
-      <section class="hero" id="top" aria-labelledby="hero-title">
-        <h1 class="hero-wordmark" id="hero-title">
-          <span class="sr-only">lean.</span>
-          <span aria-hidden="true" data-intro="2">l</span><span aria-hidden="true" data-intro="3">e</span><span aria-hidden="true" data-intro="4">a</span><span aria-hidden="true" data-intro="5">n</span><span class="wordmark-dot" aria-hidden="true" data-intro="6">.</span>
-        </h1>
-
-        <div class="hero-bottom" data-intro="7">
-          <p>
-            I design and build <em>useful digital products</em>—such as developer
-            tools, cloud infrastructure, and iPhone apps.
-          </p>
-          <a class="round-link" href="#work" aria-label="See selected work">
-            <span>See work</span>
-            <i aria-hidden="true">↓</i>
-          </a>
-        </div>
-
-        <div class="hero-orbit" aria-hidden="true">
-          <span class="orbit-ring orbit-ring-one"></span>
-          <span class="orbit-ring orbit-ring-two"></span>
-          <span class="orbit-dot orbit-dot-one"></span>
-          <span class="orbit-dot orbit-dot-two"></span>
+    <main class="shell" id="main-content">
+      <section class="intro" id="top" aria-labelledby="intro-title" data-reveal>
+        <p class="eyebrow">Developer / builder</p>
+        <h1 id="intro-title">I make practical software for the web and iPhone.</h1>
+        <p class="intro-copy">
+          I’m lean, a developer who turns fuzzy ideas into direct, dependable
+          products—developer tools, privacy-minded infrastructure, and native apps.
+        </p>
+        <div class="intro-links" aria-label="Profile links">
+          <a href="https://github.com/1337lean" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="mailto:hi@7331.lol">Email <span aria-hidden="true">↗</span></a>
         </div>
       </section>
 
-      <div class="ticker" aria-hidden="true">
-        <div class="ticker-track">
-          <span>Product engineering</span><i>✦</i><span>Web systems</span><i>✦</i><span>Applied AI</span><i>✦</i><span>Infrastructure</span><i>✦</i>
-          <span>Product engineering</span><i>✦</i><span>Web systems</span><i>✦</i><span>Applied AI</span><i>✦</i><span>Infrastructure</span><i>✦</i>
-        </div>
-      </div>
-
-      <section class="work-section" id="work" aria-labelledby="work-title">
-        <header class="section-intro" data-reveal>
-          <p class="section-label"><span>01</span> Selected work</p>
-          <h2 id="work-title">Things I’ve put<br>into the world.</h2>
-          <p class="section-summary">
-            Focused products shaped around real problems, careful systems, and
-            interfaces that make the complicated feel simple.
-          </p>
+      <section class="content-section" id="work" aria-labelledby="work-title">
+        <header class="section-heading" data-reveal>
+          <h2 id="work-title">Selected work</h2>
+          <span>04 projects</span>
         </header>
 
         <div class="project-list">
-          <article class="project-card buffer-card" data-tilt data-reveal>
-            <div class="card-glow" aria-hidden="true"></div>
-            <div class="project-head">
-              <p>01 / Open-web utility</p>
-              <span class="live-chip"><i></i> Live</span>
-            </div>
-
-            <div class="project-art buffer-art" role="img" aria-label="buffer.lol home page preview with tool search and directory">
-              <div class="buffer-preview" aria-hidden="true">
-                <div class="buffer-preview-top">
-                  <span class="buffer-wordmark">buffer<em>.lol</em></span>
-                  <span class="buffer-mini-nav"><i>Networking</i><i>IP tools</i><i>Developer</i><i>Search</i></span>
-                </div>
-                <div class="buffer-preview-main">
-                  <p class="buffer-headline">
-                    <span>Network tools.</span>
-                    <strong>Developer tools.</strong>
-                  </p>
-                  <p class="buffer-lede">
-                    Find the right network check, web diagnostic, or developer utility.
-                  </p>
-                  <div class="buffer-search">
-                    <i>⌕</i>
-                    <span>Find DNS, SSL, JSON, IP tools…</span>
-                    <b>Open</b>
-                  </div>
-                  <div class="buffer-quick">
-                    <em>Quick access</em>
-                    <span>DNS Lookup</span>
-                    <span>What's My IP</span>
-                    <span>JSON Formatter</span>
-                  </div>
-                </div>
-                <div class="buffer-tools">
-                  <article><span><i>dig</i><em>Server</em></span><strong>DNS Lookup</strong></article>
-                  <article><span><i>openssl</i><em>Server</em></span><strong>SSL Certificate Checker</strong></article>
-                  <article><span><i>jq</i><em>Local</em></span><strong>JSON Formatter</strong></article>
-                  <article><span><i>whoami</i><em>Server</em></span><strong>What's My IP</strong></article>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-info">
+          <article class="project" data-reveal>
+            <header class="project-header">
+              <span class="project-index">01</span>
               <div>
                 <h3>buffer.lol</h3>
+                <p>Open-web utility</p>
+              </div>
+              <span class="project-status"><i aria-hidden="true"></i> Live</span>
+            </header>
+            <div class="project-body">
+              <div class="project-copy">
                 <p>
                   A minimal toolbox for network diagnostics, web checks, IP
                   lookups, and everyday developer tasks—searchable, and clear
                   about what runs locally.
                 </p>
+                <ul class="tag-list" aria-label="Technologies">
+                  <li>Next.js</li>
+                  <li>TypeScript</li>
+                  <li>Network APIs</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://buffer.lol" target="_blank" rel="noreferrer">Visit live <span aria-hidden="true">↗</span></a>
+                  <a href="https://github.com/1337lean/buffer.lol" target="_blank" rel="noreferrer">Source <span aria-hidden="true">↗</span></a>
+                </div>
               </div>
-              <ul>
-                <li>Next.js</li><li>TypeScript</li><li>Network APIs</li>
-              </ul>
-              <div class="project-actions">
-                <a href="https://buffer.lol" target="_blank" rel="noreferrer">Visit live <span>↗</span></a>
-                <a href="https://github.com/1337lean/buffer.lol" target="_blank" rel="noreferrer">Source <span>↗</span></a>
-              </div>
+              <a class="project-media project-media-type" href="https://buffer.lol" target="_blank" rel="noreferrer" aria-label="Visit buffer.lol">
+                <span>buffer<em>.lol</em></span>
+                <small>Network tools / web tools</small>
+              </a>
             </div>
           </article>
 
-          <article class="project-card cloud-card" data-tilt data-reveal>
-            <div class="card-glow" aria-hidden="true"></div>
-            <div class="project-head">
-              <p>02 / Image-hosting platform</p>
-              <span class="live-chip"><i></i> Live</span>
-            </div>
-
-            <div class="project-art cloud-art" role="img" aria-label="7331.cloud image uploader and command-line interface preview">
-              <div class="cloud-preview" aria-hidden="true">
-                <div class="cloud-preview-top">
-                  <span class="cloud-wordmark">7331<em>.cloud</em></span>
-                  <span class="cloud-mini-nav"><i>Upload</i><i>CLI</i><i>Security</i></span>
-                </div>
-                <div class="cloud-preview-main">
-                  <div class="cloud-preview-copy">
-                    <p class="cloud-headline">
-                      <span>Fast uploads.</span>
-                      <strong>Simple sharing.</strong>
-                    </p>
-                    <p class="cloud-lede">
-                      Direct links, durable storage, and limits you can understand.
-                    </p>
-                    <span class="cloud-fineprint">No account required · JPEG, PNG, WebP and GIF</span>
-                  </div>
-                  <div class="cloud-uploader">
-                    <div class="cloud-uploader-head">
-                      <span><i>Anonymous upload</i><strong>Drop. Share. Done.</strong></span>
-                      <small>Expires in 24 hours</small>
-                    </div>
-                    <div class="cloud-drop-zone">
-                      <b>+</b>
-                      <strong>Drop images here</strong>
-                      <span>or choose files</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="cloud-cli">
-                  <span class="cloud-cli-label"><i></i> 7331 CLI · Go</span>
-                  <code><b>$</b> 7331 upload image.png <em>↗ https://i.7331.cloud/a8F3k.png</em></code>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-info">
+          <article class="project" data-reveal>
+            <header class="project-header">
+              <span class="project-index">02</span>
               <div>
                 <h3>7331.cloud</h3>
+                <p>Image-hosting platform</p>
+              </div>
+              <span class="project-status"><i aria-hidden="true"></i> Live</span>
+            </header>
+            <div class="project-body">
+              <div class="project-copy">
                 <p>
-                  Anonymous image hosting for fast uploads, clean direct links, and
-                  short retention—with a cross-platform Go CLI for the terminal.
+                  Anonymous image hosting for fast uploads, clean direct links,
+                  and short retention—with a cross-platform Go CLI for the terminal.
                 </p>
+                <ul class="tag-list" aria-label="Technologies">
+                  <li>Next.js</li>
+                  <li>TypeScript</li>
+                  <li>Go</li>
+                  <li>Docker</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://7331.cloud" target="_blank" rel="noreferrer">Visit live <span aria-hidden="true">↗</span></a>
+                  <a href="https://github.com/1337lean/7331-cli/releases/latest" target="_blank" rel="noreferrer">Get CLI <span aria-hidden="true">↗</span></a>
+                  <a href="https://github.com/1337lean/7331-cli" target="_blank" rel="noreferrer">Source <span aria-hidden="true">↗</span></a>
+                </div>
               </div>
-              <ul>
-                <li>Next.js</li><li>TypeScript</li><li>Go</li><li>Docker</li>
-              </ul>
-              <div class="project-actions">
-                <a href="https://7331.cloud" target="_blank" rel="noreferrer">Visit live <span>↗</span></a>
-                <a href="https://github.com/1337lean/7331-cli/releases/latest" target="_blank" rel="noreferrer">Download CLI <span>↗</span></a>
-                <a href="https://github.com/1337lean/7331-cli" target="_blank" rel="noreferrer">CLI source <span>↗</span></a>
-              </div>
+              <a class="project-media project-media-type" href="https://7331.cloud" target="_blank" rel="noreferrer" aria-label="Visit 7331.cloud">
+                <span>7331<em>.cloud</em></span>
+                <small>Drop / share / done</small>
+              </a>
             </div>
           </article>
 
-          <article class="project-card ip-lens-card" data-tilt data-reveal>
-            <div class="card-glow" aria-hidden="true"></div>
-            <div class="project-head">
-              <p>03 / Native iPhone utility</p>
-              <span class="coming-chip"><i></i> Coming soon</span>
-            </div>
-
-            <div class="project-art ip-lens-art" role="group" aria-label="IP Lens iPhone app preview">
-              <div class="ip-orbit ip-orbit-one" aria-hidden="true"></div>
-              <div class="ip-orbit ip-orbit-two" aria-hidden="true"></div>
-              <div class="ip-icon-card">
-                <img
-                  src="assets/ip-lens/app-icon.png"
-                  alt="IP Lens app icon"
-                  width="384"
-                  height="384"
-                  loading="lazy"
-                  decoding="async"
-                >
-                <span><strong>IP Lens</strong><small>Private by design</small></span>
-              </div>
-              <div class="ip-phone">
-                <img
-                  src="assets/ip-lens/ip-lookup.png"
-                  alt="IP Lens interface showing an IP address lookup, approximate location, and map"
-                  width="644"
-                  height="1400"
-                  loading="lazy"
-                  decoding="async"
-                >
-              </div>
-              <span class="ip-feature ip-feature-one" aria-hidden="true">DNS + RDAP</span>
-              <span class="ip-feature ip-feature-two" aria-hidden="true">Local exports</span>
-            </div>
-
-            <div class="project-info">
+          <article class="project" data-reveal>
+            <header class="project-header">
+              <span class="project-index">03</span>
               <div>
                 <h3>IP Lens</h3>
+                <p>Native iPhone utility</p>
+              </div>
+              <span class="project-status project-status-quiet">Coming soon</span>
+            </header>
+            <div class="project-body">
+              <div class="project-copy">
                 <p>
                   A privacy-focused native iPhone toolkit for IP intelligence,
                   DNS and RDAP registration, offline subnet calculations, batch
                   analysis, saved results, and local exports.
                 </p>
+                <ul class="tag-list" aria-label="Technologies">
+                  <li>SwiftUI</li>
+                  <li>SwiftData</li>
+                  <li>iOS 17+</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://buffer.lol/ip-lens" target="_blank" rel="noopener noreferrer">Learn more <span aria-hidden="true">↗</span></a>
+                </div>
               </div>
-              <ul>
-                <li>SwiftUI</li><li>SwiftData</li><li>iOS 17+</li>
-              </ul>
-              <div class="project-actions">
-                <a href="https://buffer.lol/ip-lens" target="_blank" rel="noopener noreferrer">Learn more <span>↗</span></a>
-              </div>
+              <a class="project-media project-media-app" href="https://buffer.lol/ip-lens" target="_blank" rel="noopener noreferrer" aria-label="Learn more about IP Lens">
+                <img class="app-icon-only" src="assets/ip-lens/app-icon.png" alt="IP Lens app icon" width="384" height="384" loading="lazy" decoding="async">
+              </a>
             </div>
           </article>
 
-          <article class="project-card neon-tether-card" data-tilt data-reveal>
-            <div class="card-glow" aria-hidden="true"></div>
-            <div class="project-head">
-              <p>04 / Native iPhone game</p>
-              <span class="beta-chip"><i></i> Beta testing</span>
-            </div>
-
-            <div class="project-art neon-tether-art" role="group" aria-label="Neon Tether iPhone game preview">
-              <div class="neon-orbit neon-orbit-one" aria-hidden="true"></div>
-              <div class="neon-orbit neon-orbit-two" aria-hidden="true"></div>
-              <div class="neon-phone">
-                <img
-                  src="assets/neon-tether/menu.png"
-                  alt="Neon Tether menu showing its neon space-themed interface and launch button"
-                  width="644"
-                  height="1400"
-                  loading="lazy"
-                  decoding="async"
-                >
-              </div>
-              <div class="neon-icon-card">
-                <img
-                  src="assets/neon-tether/app-icon.png"
-                  alt="Neon Tether app icon"
-                  width="384"
-                  height="384"
-                  loading="lazy"
-                  decoding="async"
-                >
-                <span><strong>Neon Tether</strong><small>Hold. Orbit. Release.</small></span>
-              </div>
-              <span class="neon-feature neon-feature-one" aria-hidden="true">One-thumb flight</span>
-              <span class="neon-feature neon-feature-two" aria-hidden="true">Daily Rift</span>
-            </div>
-
-            <div class="project-info">
+          <article class="project" data-reveal>
+            <header class="project-header">
+              <span class="project-index">04</span>
               <div>
                 <h3>Neon Tether</h3>
+                <p>Native iPhone game</p>
+              </div>
+              <span class="project-status project-status-beta"><i aria-hidden="true"></i> Beta</span>
+            </header>
+            <div class="project-body">
+              <div class="project-copy">
                 <p>
                   A one-thumb orbital score-chaser for iPhone. Bend gravity,
                   thread cores, skim mines, and build Overdrive across endless
-                  runs and a shared daily challenge—fully local, with no ads or
-                  purchases.
+                  runs and a shared daily challenge—fully local, with no ads or purchases.
                 </p>
+                <ul class="tag-list" aria-label="Technologies">
+                  <li>SwiftUI</li>
+                  <li>SpriteKit</li>
+                  <li>iOS 17+</li>
+                  <li>TestFlight</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/1337lean/neon-tether" target="_blank" rel="noreferrer">View source <span aria-hidden="true">↗</span></a>
+                </div>
               </div>
-              <ul>
-                <li>SwiftUI</li><li>SpriteKit</li><li>iOS 17+</li><li>TestFlight</li>
-              </ul>
-              <div class="project-actions">
-                <a href="https://github.com/1337lean/neon-tether" target="_blank" rel="noreferrer">View source <span>↗</span></a>
-              </div>
+              <a class="project-media project-media-app" href="https://github.com/1337lean/neon-tether" target="_blank" rel="noreferrer" aria-label="View Neon Tether source">
+                <img class="app-icon-only" src="assets/neon-tether/app-icon.png" alt="Neon Tether app icon" width="384" height="384" loading="lazy" decoding="async">
+              </a>
             </div>
           </article>
-
         </div>
       </section>
 
-      <section class="about-section" id="about" aria-labelledby="about-title">
-        <div class="about-heading" data-reveal>
-          <p class="section-label"><span>02</span> About</p>
-          <h2 id="about-title">Curious by nature.<br><em>Intentional</em> by design.</h2>
-        </div>
+      <section class="content-section split-section" id="about" aria-labelledby="about-title">
+        <header class="section-heading" data-reveal>
+          <h2 id="about-title">About</h2>
+          <span>In brief</span>
+        </header>
 
-        <div class="about-layout">
-          <div class="about-copy" data-reveal>
-            <p class="about-lede">
-              I’m lean, a developer who likes turning fuzzy ideas into direct,
-              dependable software.
+        <div class="split-content" data-reveal>
+          <p class="lead">
+            My work sits where product thinking meets engineering.
+          </p>
+          <div class="prose">
+            <p>
+              I build useful web and native iPhone tools, privacy-minded
+              infrastructure, and model-powered workflows that hold up beyond
+              the first demo.
             </p>
             <p>
-              My work sits where product thinking meets engineering: useful web
-              and native iPhone tools, privacy-minded infrastructure, and
-              model-powered workflows that hold up beyond the first demo. I care
-              about speed, clarity, and the quiet details that make a product
-              feel considered.
+              I care about speed, clarity, and the quiet details that make a
+              product feel considered.
             </p>
-            <a href="https://github.com/1337lean" target="_blank" rel="noreferrer">Explore my GitHub <span>↗</span></a>
           </div>
+        </div>
 
-          <div class="capability-board" data-reveal role="group" aria-label="Interactive capabilities">
-            <div class="board-header">
-              <span><i></i> Current toolkit</span>
-              <small>08 capabilities · hover or tap</small>
-            </div>
-            <div class="capability-grid">
-              <button class="skill-tile tile-wide tile-typescript" type="button" aria-describedby="typescript-detail">
-                <span class="tile-top"><i>TS</i><b>01</b></span><strong>TypeScript</strong><em>Product systems</em>
-                <small id="typescript-detail">Typed interfaces across browser and server tooling.</small>
-              </button>
-              <button class="skill-tile tile-python" type="button" aria-describedby="python-detail">
-                <span class="tile-top"><i>py</i><b>02</b></span><strong>Python</strong><em>Automation</em>
-                <small id="python-detail">Diagnostics, scripts, and backend tooling.</small>
-              </button>
-              <button class="skill-tile tile-react" type="button" aria-describedby="react-detail">
-                <span class="tile-top"><i>↻</i><b>03</b></span><strong>React</strong><em>Interfaces</em>
-                <small id="react-detail">Interactive product and dashboard views.</small>
-              </button>
-              <button class="skill-tile tile-node" type="button" aria-describedby="node-detail">
-                <span class="tile-top"><i>js</i><b>04</b></span><strong>Node.js</strong><em>Runtime</em>
-                <small id="node-detail">APIs, server logic, and request pipelines.</small>
-              </button>
-              <button class="skill-tile tile-wide tile-postgres" type="button" aria-describedby="postgres-detail">
-                <span class="tile-top"><i>db</i><b>05</b></span><strong>PostgreSQL</strong><em>Data systems</em>
-                <small id="postgres-detail">Relational storage and query design.</small>
-              </button>
-              <button class="skill-tile tile-llm" type="button" aria-describedby="llm-detail">
-                <span class="tile-top"><i>ai</i><b>06</b></span><strong>LLM APIs</strong><em>Applied AI</em>
-                <small id="llm-detail">Agents, retrieval, and structured outputs.</small>
-              </button>
-              <button class="skill-tile tile-wide tile-docker" type="button" aria-describedby="docker-detail">
-                <span class="tile-top"><i>◈</i><b>07</b></span><strong>Docker</strong><em>Infrastructure</em>
-                <small id="docker-detail">Repeatable VPS deployments and isolated services.</small>
-              </button>
-              <button class="skill-tile tile-wide tile-swiftui" type="button" aria-describedby="swiftui-detail">
-                <span class="tile-top"><i>UI</i><b>08</b></span><strong>SwiftUI</strong><em>Native iPhone</em>
-                <small id="swiftui-detail">Private, local-first iPhone utilities with SwiftData.</small>
-              </button>
-            </div>
+        <div class="toolkit" data-reveal>
+          <div class="toolkit-heading">
+            <h3>Toolkit</h3>
+            <span>What I reach for</span>
           </div>
+          <ul>
+            <li><span>Interfaces</span><p>TypeScript, React, SwiftUI</p></li>
+            <li><span>Systems</span><p>Node.js, Python, PostgreSQL</p></li>
+            <li><span>Infrastructure</span><p>Docker, Linux, network APIs</p></li>
+            <li><span>Applied AI</span><p>LLM APIs, agents, retrieval</p></li>
+          </ul>
         </div>
       </section>
 
+      <section class="content-section connect-section" id="connect" aria-labelledby="connect-title">
+        <header class="section-heading" data-reveal>
+          <h2 id="connect-title">Connect</h2>
+          <span>Say hello</span>
+        </header>
+
+        <div class="connect-list" data-reveal>
+          <a href="mailto:hi@7331.lol">
+            <span>Email</span>
+            <strong>hi@7331.lol</strong>
+            <i aria-hidden="true">↗</i>
+          </a>
+          <a href="https://github.com/1337lean" target="_blank" rel="noreferrer">
+            <span>GitHub</span>
+            <strong>@1337lean</strong>
+            <i aria-hidden="true">↗</i>
+          </a>
+        </div>
+      </section>
     </main>
 
-    <footer class="site-footer">
-      <section class="closing-section" aria-label="Closing statement">
-        <p data-reveal>Always exploring the space between</p>
-        <h2 data-reveal>“What if?” <span>and</span> “It works.”</h2>
-        <div class="closing-actions" data-reveal>
-          <a class="closing-link" href="https://github.com/1337lean" target="_blank" rel="noreferrer">
-            <span>See what I’m building</span><i aria-hidden="true">↗</i>
-          </a>
-          <a class="closing-link closing-link-contact" href="mailto:hi@7331.lol">
-            <span>Get in touch</span><i aria-hidden="true">✉</i>
-          </a>
-        </div>
-      </section>
-
-      <div class="footer-bar">
-        <div class="footer-meta"><span>© 2026 lean</span></div>
-        <nav aria-label="Footer navigation">
-          <a href="https://buffer.lol" target="_blank" rel="noreferrer">buffer.lol ↗</a>
-          <a href="https://7331.cloud" target="_blank" rel="noreferrer">7331.cloud ↗</a>
-          <a href="https://buffer.lol/ip-lens" target="_blank" rel="noopener noreferrer">IP Lens ↗</a>
-          <a href="https://github.com/1337lean/neon-tether" target="_blank" rel="noreferrer">Neon Tether ↗</a>
-          <a href="https://github.com/1337lean" target="_blank" rel="noreferrer">GitHub ↗</a>
-        </nav>
-      </div>
+    <footer class="site-footer shell">
+      <p>© <span id="year">2026</span> lean</p>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
     </footer>
   </body>
 </html>

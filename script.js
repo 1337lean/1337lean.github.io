@@ -1,22 +1,61 @@
 document.documentElement.classList.add("js");
 
 const root = document.documentElement;
-const nav = document.querySelector(".nav-shell");
+const header = document.querySelector(".site-header");
+const themeToggle = document.querySelector(".theme-toggle");
+const themeLabel = themeToggle?.querySelector("span");
+const themeMeta = document.querySelector('meta[name="theme-color"]');
 const revealTargets = document.querySelectorAll("[data-reveal]");
-const tiltTargets = document.querySelectorAll("[data-tilt]");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const systemTheme = window.matchMedia("(prefers-color-scheme: light)");
 
-let pointerFrame = 0;
-let scrollFrame = 0;
-
-window.requestAnimationFrame(() => document.body.classList.add("is-ready"));
-
-function revealAll() {
-  revealTargets.forEach((target) => target.classList.add("is-visible"));
+function readTheme() {
+  try {
+    return localStorage.getItem("lean-theme");
+  } catch {
+    return null;
+  }
 }
 
+function storeTheme(theme) {
+  try {
+    localStorage.setItem("lean-theme", theme);
+  } catch {
+    // The theme still works when storage is unavailable.
+  }
+}
+
+function applyTheme(theme) {
+  const isLight = theme === "light";
+  root.dataset.theme = theme;
+  themeToggle?.setAttribute("aria-pressed", String(isLight));
+  themeToggle?.setAttribute("aria-label", `Switch to ${isLight ? "dark" : "light"} theme`);
+  if (themeLabel) themeLabel.textContent = isLight ? "Dark" : "Light";
+  themeMeta?.setAttribute("content", isLight ? "#f5f4f0" : "#0a0a0a");
+}
+
+const savedTheme = readTheme();
+applyTheme(savedTheme || (systemTheme.matches ? "light" : "dark"));
+
+themeToggle?.addEventListener("click", () => {
+  const nextTheme = root.dataset.theme === "light" ? "dark" : "light";
+  applyTheme(nextTheme);
+  storeTheme(nextTheme);
+});
+
+systemTheme.addEventListener("change", (event) => {
+  if (!readTheme()) applyTheme(event.matches ? "light" : "dark");
+});
+
+function updateHeader() {
+  header?.classList.toggle("is-scrolled", window.scrollY > 8);
+}
+
+window.addEventListener("scroll", updateHeader, { passive: true });
+updateHeader();
+
 if (reducedMotion.matches || !("IntersectionObserver" in window)) {
-  revealAll();
+  revealTargets.forEach((target) => target.classList.add("is-visible"));
 } else {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -26,59 +65,11 @@ if (reducedMotion.matches || !("IntersectionObserver" in window)) {
         observer.unobserve(entry.target);
       });
     },
-    { rootMargin: "0px 0px -10% 0px", threshold: 0.1 },
+    { rootMargin: "0px 0px -8% 0px", threshold: 0.08 },
   );
 
   revealTargets.forEach((target) => observer.observe(target));
 }
 
-function updatePointer(event) {
-  if (reducedMotion.matches || pointerFrame) return;
-
-  pointerFrame = window.requestAnimationFrame(() => {
-    root.style.setProperty("--mouse-x", `${event.clientX}px`);
-    root.style.setProperty("--mouse-y", `${event.clientY}px`);
-    pointerFrame = 0;
-  });
-}
-
-function updateNav() {
-  if (scrollFrame) return;
-
-  scrollFrame = window.requestAnimationFrame(() => {
-    nav?.classList.toggle("is-scrolled", window.scrollY > 48);
-    scrollFrame = 0;
-  });
-}
-
-window.addEventListener("pointermove", updatePointer, { passive: true });
-window.addEventListener("scroll", updateNav, { passive: true });
-updateNav();
-
-tiltTargets.forEach((card) => {
-  card.addEventListener("pointermove", (event) => {
-    if (reducedMotion.matches || event.pointerType === "touch") return;
-
-    const bounds = card.getBoundingClientRect();
-    const x = (event.clientX - bounds.left) / bounds.width;
-    const y = (event.clientY - bounds.top) / bounds.height;
-
-    card.style.setProperty("--card-x", `${(x * 100).toFixed(1)}%`);
-    card.style.setProperty("--card-y", `${(y * 100).toFixed(1)}%`);
-    card.style.setProperty("--tilt-x", `${((0.5 - y) * 2.4).toFixed(2)}deg`);
-    card.style.setProperty("--tilt-y", `${((x - 0.5) * 2.4).toFixed(2)}deg`);
-  });
-
-  card.addEventListener("pointerleave", () => {
-    card.style.setProperty("--tilt-x", "0deg");
-    card.style.setProperty("--tilt-y", "0deg");
-  });
-});
-
-reducedMotion.addEventListener("change", () => {
-  revealAll();
-  tiltTargets.forEach((card) => {
-    card.style.setProperty("--tilt-x", "0deg");
-    card.style.setProperty("--tilt-y", "0deg");
-  });
-});
+const year = document.querySelector("#year");
+if (year) year.textContent = String(new Date().getFullYear());

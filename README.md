@@ -2,12 +2,10 @@
 
 Personal GitHub Pages site for lean.
 
-The site is an animated developer portfolio featuring lean's work on
-buffer.lol, 7331.cloud, IP Lens, and Neon Tether. It uses its own cinematic
-purple identity with oversized typography, ambient light, editorial project
-stories, and smooth motion that remains respectful of reduced-motion
-preferences. Its interactive capability board connects each technology to
-concrete project experience.
+The site is a minimal developer portfolio featuring lean's work on buffer.lol,
+7331.cloud, IP Lens, and Neon Tether. It uses a restrained monochrome system,
+compact editorial typography, clear project rows, subtle motion, and an
+accessible light/dark theme.
 
 ## Projects
 
@@ -39,8 +37,8 @@ Then visit <http://localhost:8000>.
 
 ```text
 index.html        Page structure and content
-styles.css        Distinctive purple visual system, responsive layout, and motion
-script.js         Progressive reveals, ambient pointer light, and subtle card depth
+styles.css        Minimal responsive visual system and restrained motion
+script.js         Theme preference, progressive reveals, and header behavior
 assets/ip-lens/   Optimized IP Lens app imagery
 README.md         Project notes
 ```
