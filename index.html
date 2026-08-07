@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -50,7 +50,7 @@
           I’m lean. I turn ideas into software people can actually use—developer
           tools, privacy-minded infrastructure, and native apps.
         </p>
-        <div class="intro-links" aria-label="Profile links">
+        <div class="intro-links" role="group" aria-label="Profile links">
           <a href="https://github.com/1337lean" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
           <a href="mailto:hi@7331.lol">Email <span aria-hidden="true">↗</span></a>
         </div>
@@ -59,7 +59,7 @@
       <section class="content-section" id="work" aria-labelledby="work-title">
         <header class="section-heading" data-reveal>
           <h2 id="work-title">Selected work</h2>
-          <span>05 projects</span>
+          <span>09 projects</span>
         </header>
 
         <div class="project-list">
@@ -79,7 +79,7 @@
                   lookups, and everyday developer tasks—searchable, and clear
                   about what runs locally.
                 </p>
-                <ul class="tag-list" aria-label="Technologies">
+                <ul class="tag-list">
                   <li>Next.js</li>
                   <li>TypeScript</li>
                   <li>Network APIs</li>
@@ -111,7 +111,7 @@
                   Anonymous image hosting for fast uploads, clean direct links,
                   and short retention—with a cross-platform Go CLI for the terminal.
                 </p>
-                <ul class="tag-list" aria-label="Technologies">
+                <ul class="tag-list">
                   <li>Next.js</li>
                   <li>TypeScript</li>
                   <li>Go</li>
@@ -134,6 +134,142 @@
             <header class="project-header">
               <span class="project-index">03</span>
               <div>
+                <h3>Envguard</h3>
+                <p>Dotenv contract CLI</p>
+              </div>
+              <span class="project-status"><i aria-hidden="true"></i> Released</span>
+            </header>
+            <div class="project-body">
+              <div class="project-copy">
+                <p>
+                  A dependency-free CLI that catches dotenv drift before
+                  deployment with safe templates and typed schema checks—without
+                  printing secret values.
+                </p>
+                <ul class="tag-list">
+                  <li>Go</li>
+                  <li>CLI</li>
+                  <li>DevSecOps</li>
+                  <li>Dotenv</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/1337lean/envguard/releases/latest" target="_blank" rel="noreferrer">Latest release <span aria-hidden="true">↗</span></a>
+                  <a href="https://github.com/1337lean/envguard" target="_blank" rel="noreferrer">View source <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+              <a class="project-media project-media-type" href="https://github.com/1337lean/envguard" target="_blank" rel="noreferrer" aria-label="View Envguard source">
+                <span>env<em>guard</em></span>
+                <small>Dotenv contracts / no secrets</small>
+              </a>
+            </div>
+          </article>
+
+          <article class="project" data-reveal>
+            <header class="project-header">
+              <span class="project-index">04</span>
+              <div>
+                <h3>Certpulse</h3>
+                <p>TLS monitoring CLI</p>
+              </div>
+              <span class="project-status"><i aria-hidden="true"></i> Released</span>
+            </header>
+            <div class="project-body">
+              <div class="project-copy">
+                <p>
+                  A single-binary CLI for batch TLS certificate and protocol
+                  checks, with trust, hostname, expiration, OCSP, JSON, and
+                  Prometheus support built in.
+                </p>
+                <ul class="tag-list">
+                  <li>Go</li>
+                  <li>TLS</li>
+                  <li>OCSP</li>
+                  <li>Prometheus</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/1337lean/certpulse/releases/latest" target="_blank" rel="noreferrer">Latest release <span aria-hidden="true">↗</span></a>
+                  <a href="https://github.com/1337lean/certpulse" target="_blank" rel="noreferrer">View source <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+              <a class="project-media project-media-type" href="https://github.com/1337lean/certpulse" target="_blank" rel="noreferrer" aria-label="View Certpulse source">
+                <span>cert<em>pulse</em></span>
+                <small>TLS checks / clear signals</small>
+              </a>
+            </div>
+          </article>
+
+          <article class="project" data-reveal>
+            <header class="project-header">
+              <span class="project-index">05</span>
+              <div>
+                <h3>Relaybox</h3>
+                <p>Webhook infrastructure</p>
+              </div>
+              <span class="project-status"><i aria-hidden="true"></i> Released</span>
+            </header>
+            <div class="project-body">
+              <div class="project-copy">
+                <p>
+                  A durable webhook inbox that captures requests, verifies
+                  GitHub signatures, suppresses duplicates, retries forwarding,
+                  and includes an authenticated browser inspector.
+                </p>
+                <ul class="tag-list">
+                  <li>Go</li>
+                  <li>Webhooks</li>
+                  <li>HMAC</li>
+                  <li>Docker</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/1337lean/relaybox/releases/latest" target="_blank" rel="noreferrer">Latest release <span aria-hidden="true">↗</span></a>
+                  <a href="https://github.com/1337lean/relaybox" target="_blank" rel="noreferrer">View source <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+              <a class="project-media project-media-type" href="https://github.com/1337lean/relaybox" target="_blank" rel="noreferrer" aria-label="View Relaybox source">
+                <span>relay<em>box</em></span>
+                <small>Capture / verify / replay</small>
+              </a>
+            </div>
+          </article>
+
+          <article class="project" data-reveal>
+            <header class="project-header">
+              <span class="project-index">06</span>
+              <div>
+                <h3>Gatehouse</h3>
+                <p>Release policy CLI</p>
+              </div>
+              <span class="project-status"><i aria-hidden="true"></i> Released</span>
+            </header>
+            <div class="project-body">
+              <div class="project-copy">
+                <p>
+                  A dependency-free policy gate for release bundles that checks
+                  file constraints, checksums, SBOM structure, and provenance at
+                  CI and deployment boundaries.
+                </p>
+                <ul class="tag-list">
+                  <li>Go</li>
+                  <li>CI/CD</li>
+                  <li>SBOM</li>
+                  <li>Provenance</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/1337lean/gatehouse/releases/latest" target="_blank" rel="noreferrer">Latest release <span aria-hidden="true">↗</span></a>
+                  <a href="https://github.com/1337lean/gatehouse" target="_blank" rel="noreferrer">View source <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+              <a class="project-media project-media-type" href="https://github.com/1337lean/gatehouse" target="_blank" rel="noreferrer" aria-label="View Gatehouse source">
+                <span>gate<em>house</em></span>
+                <small>Trust releases / before deploy</small>
+              </a>
+            </div>
+          </article>
+
+          <article class="project" data-reveal>
+            <header class="project-header">
+              <span class="project-index">07</span>
+              <div>
                 <h3>IP Lens</h3>
                 <p>Native iPhone utility</p>
               </div>
@@ -146,7 +282,7 @@
                   DNS and RDAP registration, offline subnet calculations, batch
                   analysis, saved results, and local exports.
                 </p>
-                <ul class="tag-list" aria-label="Technologies">
+                <ul class="tag-list">
                   <li>SwiftUI</li>
                   <li>SwiftData</li>
                   <li>iOS 17+</li>
@@ -163,7 +299,7 @@
 
           <article class="project" data-reveal>
             <header class="project-header">
-              <span class="project-index">04</span>
+              <span class="project-index">08</span>
               <div>
                 <h3>Neon Tether</h3>
                 <p>Native iPhone game</p>
@@ -177,7 +313,7 @@
                   thread cores, skim mines, and build Overdrive across endless
                   runs and a shared daily challenge—fully local, with no ads or purchases.
                 </p>
-                <ul class="tag-list" aria-label="Technologies">
+                <ul class="tag-list">
                   <li>SwiftUI</li>
                   <li>SpriteKit</li>
                   <li>iOS 17+</li>
@@ -195,7 +331,7 @@
 
           <article class="project" data-reveal>
             <header class="project-header">
-              <span class="project-index">05</span>
+              <span class="project-index">09</span>
               <div>
                 <h3>Kevin</h3>
                 <p>Discord &amp; Telegram bot</p>
@@ -209,7 +345,7 @@
                   music, tickets, and live alerts—plus a Telegram companion that
                   answers questions with web-backed sources.
                 </p>
-                <ul class="tag-list" aria-label="Technologies">
+                <ul class="tag-list">
                   <li>Python</li>
                   <li>discord.py</li>
                   <li>SQLite</li>
@@ -257,7 +393,7 @@
           </div>
           <ul>
             <li><span>Interfaces</span><p>TypeScript, React, SwiftUI</p></li>
-            <li><span>Systems</span><p>Node.js, Python, PostgreSQL</p></li>
+            <li><span>Systems</span><p>Go, Node.js, Python, PostgreSQL</p></li>
             <li><span>Infrastructure</span><p>Docker, Linux, network APIs</p></li>
             <li><span>Applied AI</span><p>LLM APIs, agents, retrieval</p></li>
           </ul>
