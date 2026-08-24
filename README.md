@@ -16,7 +16,7 @@ motion, and an accessible light/dark theme.
 - [Relaybox](https://github.com/1337lean/relaybox) — durable webhook capture, verification, forwarding, and inspection
 - [Gatehouse](https://github.com/1337lean/gatehouse) — release-bundle policy checks for CI and deployment boundaries
 - [IP Lens](https://buffer.lol/ip-lens) — a privacy-focused native iPhone toolkit for IP intelligence
-- [Neon Tether](https://github.com/1337lean/neon-tether) — a one-thumb orbital score-chaser for iPhone
+- [Neon Tether](https://neontether.com) — a one-thumb orbital score-chaser for iPhone ([source](https://github.com/1337lean/neon-tether))
 - [Kevin](https://github.com/1337lean/kevin) — a modular Discord bot with a Telegram AI companion
 
 Live site: <https://1337lean.github.io>
