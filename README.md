@@ -9,6 +9,7 @@ motion, and an accessible light/dark theme.
 
 ## Projects
 
+- [Portal](https://portalchat.org) — passkey-first messaging with end-to-end encrypted chats, media, and calls
 - [buffer.lol](https://buffer.lol) — browser-based network diagnostics and developer tools
 - [7331.cloud](https://7331.cloud) — anonymous image hosting with short retention and a companion [Go CLI](https://github.com/1337lean/7331-cli)
 - [Envguard](https://github.com/1337lean/envguard) — dependency-free dotenv contract validation without secret exposure
