@@ -1,75 +1,73 @@
-document.documentElement.classList.add("js");
+// Theme management & micro-interactions
+(function () {
+  const root = document.documentElement;
+  const header = document.querySelector(".site-header");
+  const themeToggle = document.querySelector(".theme-toggle");
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 
-const root = document.documentElement;
-const header = document.querySelector(".site-header");
-const themeToggle = document.querySelector(".theme-toggle");
-const themeLabel = themeToggle?.querySelector("span");
-const themeMeta = document.querySelector('meta[name="theme-color"]');
-const revealTargets = document.querySelectorAll("[data-reveal]");
-const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const systemTheme = window.matchMedia("(prefers-color-scheme: light)");
-
-function readTheme() {
-  try {
-    return localStorage.getItem("lean-theme");
-  } catch {
-    return null;
+  function getActiveTheme() {
+    try {
+      const stored = localStorage.getItem("lean-theme");
+      if (stored) return stored;
+    } catch (e) {
+      // localStorage may be disabled
+    }
+    return systemPrefersDark.matches ? "dark" : "light";
   }
-}
 
-function storeTheme(theme) {
-  try {
-    localStorage.setItem("lean-theme", theme);
-  } catch {
-    // The theme still works when storage is unavailable.
+  function setTheme(theme) {
+    root.setAttribute("data-theme", theme);
+    const isLight = theme === "light";
+    if (themeToggle) {
+      themeToggle.setAttribute("aria-label", `Switch to ${isLight ? "dark" : "light"} mode`);
+      themeToggle.setAttribute("title", `Switch to ${isLight ? "dark" : "light"} mode`);
+    }
+    if (themeMeta) {
+      themeMeta.setAttribute("content", isLight ? "#fafaf9" : "#09090b");
+    }
+    try {
+      localStorage.setItem("lean-theme", theme);
+    } catch (e) {}
   }
-}
 
-function applyTheme(theme) {
-  const isLight = theme === "light";
-  root.dataset.theme = theme;
-  themeToggle?.setAttribute("aria-pressed", String(isLight));
-  themeToggle?.setAttribute("aria-label", `Switch to ${isLight ? "dark" : "light"} theme`);
-  if (themeLabel) themeLabel.textContent = isLight ? "Dark" : "Light";
-  themeMeta?.setAttribute("content", isLight ? "#f5f4f0" : "#0a0a0a");
-}
+  // Set initial theme
+  setTheme(getActiveTheme());
 
-const savedTheme = readTheme();
-applyTheme(savedTheme || (systemTheme.matches ? "light" : "dark"));
+  // Toggle on click
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme") || "dark";
+      const next = current === "light" ? "dark" : "light";
+      setTheme(next);
+    });
+  }
 
-themeToggle?.addEventListener("click", () => {
-  const nextTheme = root.dataset.theme === "light" ? "dark" : "light";
-  applyTheme(nextTheme);
-  storeTheme(nextTheme);
-});
+  // Sync with OS preferences if user hasn't explicitly set a preference
+  systemPrefersDark.addEventListener("change", (e) => {
+    try {
+      if (!localStorage.getItem("lean-theme")) {
+        setTheme(e.matches ? "dark" : "light");
+      }
+    } catch (err) {}
+  });
 
-systemTheme.addEventListener("change", (event) => {
-  if (!readTheme()) applyTheme(event.matches ? "light" : "dark");
-});
+  // Header scroll detection
+  function handleScroll() {
+    if (!header) return;
+    if (window.scrollY > 12) {
+      header.classList.add("is-scrolled");
+    } else {
+      header.classList.remove("is-scrolled");
+    }
+  }
 
-function updateHeader() {
-  header?.classList.toggle("is-scrolled", window.scrollY > 8);
-}
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  handleScroll();
 
-window.addEventListener("scroll", updateHeader, { passive: true });
-updateHeader();
-
-if (reducedMotion.matches || !("IntersectionObserver" in window)) {
-  revealTargets.forEach((target) => target.classList.add("is-visible"));
-} else {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      });
-    },
-    { rootMargin: "0px 0px -8% 0px", threshold: 0.08 },
-  );
-
-  revealTargets.forEach((target) => observer.observe(target));
-}
-
-const year = document.querySelector("#year");
-if (year) year.textContent = String(new Date().getFullYear());
+  // Footer Year
+  const yearEl = document.getElementById("year");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+})();

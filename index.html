@@ -6,457 +6,514 @@
     <meta name="color-scheme" content="dark light">
     <meta
       name="description"
-      content="lean is a developer building focused web tools, infrastructure, and native iPhone apps."
+      content="lean is a developer building focused web tools, native iPhone apps, and open-source infrastructure."
     >
-    <meta name="theme-color" content="#0a0a0a">
+    <meta name="theme-color" content="#09090b">
     <title>lean — developer &amp; builder</title>
+
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     >
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Immediate theme application to prevent FOUC -->
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('lean-theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = saved || (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch(e) {}
+      })();
+    </script>
     <script src="script.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
+    <!-- Sticky Navigation Bar -->
     <header class="site-header">
-      <div class="shell header-inner">
-        <a class="brand" href="#top" aria-label="lean, back to top">
-          <span class="brand-mark" aria-hidden="true">l/</span>
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="lean — Back to top">
+          <span class="brand-glyph" aria-hidden="true">l/</span>
           <span>lean</span>
         </a>
 
-        <nav class="primary-nav" aria-label="Primary navigation">
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
-          <a href="#connect">Connect</a>
-        </nav>
+        <div class="nav-group">
+          <nav class="primary-nav" aria-label="Primary navigation">
+            <a href="#projects">Work</a>
+            <a href="#tools">Tools</a>
+            <a href="#about">About</a>
+            <a href="#connect">Connect</a>
+          </nav>
 
-        <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
-          <span aria-hidden="true">Light</span>
-        </button>
+          <button class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
 
-    <main class="shell" id="main-content">
-      <section class="intro" id="top" aria-labelledby="intro-title" data-reveal>
-        <p class="eyebrow">Developer / builder</p>
-        <h1 id="intro-title">I make practical software for the web and iPhone.</h1>
-        <p class="intro-copy">
-          I’m lean. I turn ideas into software people can actually use—developer
-          tools, privacy-minded infrastructure, and native apps.
+    <main class="container" id="main-content">
+      <!-- Hero Intro -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <h1 class="hero-title" id="hero-title">
+          I make practical software for the web and iPhone.
+        </h1>
+        <p class="hero-bio">
+          I’m lean. I turn ideas into software people actually use — developer tools,
+          privacy-minded infrastructure, and native apps.
         </p>
-        <div class="intro-links" role="group" aria-label="Profile links">
-          <a href="https://github.com/1337lean" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-          <a href="mailto:hi@7331.lol">Email <span aria-hidden="true">↗</span></a>
-        </div>
-      </section>
-
-      <section class="content-section" id="work" aria-labelledby="work-title">
-        <header class="section-heading" data-reveal>
-          <h2 id="work-title">Selected work</h2>
-          <span>10 projects</span>
-        </header>
-
-        <div class="project-list">
-          <article class="project" data-reveal>
-            <header class="project-header">
-              <span class="project-index">01</span>
-              <div>
-                <h3>Portal</h3>
-                <p>Encrypted messaging platform</p>
-              </div>
-              <span class="project-status"><i aria-hidden="true"></i> Live</span>
-            </header>
-            <div class="project-body">
-              <div class="project-copy">
-                <p>
-                  A passkey-first messenger with end-to-end encrypted direct
-                  messages, group chats, media, and voice and video calls—built
-                  on MLS, with message keys kept on your devices.
-                </p>
-                <ul class="tag-list">
-                  <li>React</li>
-                  <li>TypeScript</li>
-                  <li>FastAPI</li>
-                  <li>Rust / WebAssembly</li>
-                </ul>
-                <div class="project-links">
-                  <a href="https://portalchat.org" target="_blank" rel="noreferrer">Visit live <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-              <a class="project-media project-media-type" href="https://portalchat.org" target="_blank" rel="noreferrer" aria-label="Visit Portal">
-                <span>Portal</span>
-                <small>Private chats / passkey-first</small>
-              </a>
-            </div>
-          </article>
-
-          <article class="project" data-reveal>
-            <header class="project-header">
-              <span class="project-index">02</span>
-              <div>
-                <h3>buffer.lol</h3>
-                <p>Open-web utility</p>
-              </div>
-              <span class="project-status"><i aria-hidden="true"></i> Live</span>
-            </header>
-            <div class="project-body">
-              <div class="project-copy">
-                <p>
-                  A minimal toolbox for network diagnostics, web checks, IP
-                  lookups, and everyday developer tasks—searchable, and clear
-                  about what runs locally.
-                </p>
-                <ul class="tag-list">
-                  <li>Next.js</li>
-                  <li>TypeScript</li>
-                  <li>Network APIs</li>
-                </ul>
-                <div class="project-links">
-                  <a href="https://buffer.lol" target="_blank" rel="noreferrer">Visit live <span aria-hidden="true">↗</span></a>
-                  <a href="https://github.com/1337lean/buffer.lol" target="_blank" rel="noreferrer">Source <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-              <a class="project-media project-media-type" href="https://buffer.lol" target="_blank" rel="noreferrer" aria-label="Visit buffer.lol">
-                <span>buffer<em>.lol</em></span>
-                <small>Network tools / web tools</small>
-              </a>
-            </div>
-          </article>
-
-          <article class="project" data-reveal>
-            <header class="project-header">
-              <span class="project-index">03</span>
-              <div>
-                <h3>7331.cloud</h3>
-                <p>Image-hosting platform</p>
-              </div>
-              <span class="project-status"><i aria-hidden="true"></i> Live</span>
-            </header>
-            <div class="project-body">
-              <div class="project-copy">
-                <p>
-                  Anonymous image hosting for fast uploads, clean direct links,
-                  and short retention—with a cross-platform Go CLI for the terminal.
-                </p>
-                <ul class="tag-list">
-                  <li>Next.js</li>
-                  <li>TypeScript</li>
-                  <li>Go</li>
-                  <li>Docker</li>
-                </ul>
-                <div class="project-links">
-                  <a href="https://7331.cloud" target="_blank" rel="noreferrer">Visit live <span aria-hidden="true">↗</span></a>
-                  <a href="https://github.com/1337lean/7331-cli/releases/latest" target="_blank" rel="noreferrer">Get CLI <span aria-hidden="true">↗</span></a>
-                  <a href="https://github.com/1337lean/7331-cli" target="_blank" rel="noreferrer">Source <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-              <a class="project-media project-media-type" href="https://7331.cloud" target="_blank" rel="noreferrer" aria-label="Visit 7331.cloud">
-                <span>7331<em>.cloud</em></span>
-                <small>Drop / share / done</small>
-              </a>
-            </div>
-          </article>
-
-          <article class="project" data-reveal>
-            <header class="project-header">
-              <span class="project-index">04</span>
-              <div>
-                <h3>Envguard</h3>
-                <p>Dotenv contract CLI</p>
-              </div>
-              <span class="project-status"><i aria-hidden="true"></i> Released</span>
-            </header>
-            <div class="project-body">
-              <div class="project-copy">
-                <p>
-                  A dependency-free CLI that catches dotenv drift before
-                  deployment with safe templates and typed schema checks—without
-                  printing secret values.
-                </p>
-                <ul class="tag-list">
-                  <li>Go</li>
-                  <li>CLI</li>
-                  <li>DevSecOps</li>
-                  <li>Dotenv</li>
-                </ul>
-                <div class="project-links">
-                  <a href="https://github.com/1337lean/envguard/releases/latest" target="_blank" rel="noreferrer">Latest release <span aria-hidden="true">↗</span></a>
-                  <a href="https://github.com/1337lean/envguard" target="_blank" rel="noreferrer">View source <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-              <a class="project-media project-media-type" href="https://github.com/1337lean/envguard" target="_blank" rel="noreferrer" aria-label="View Envguard source">
-                <span>env<em>guard</em></span>
-                <small>Dotenv contracts / no secrets</small>
-              </a>
-            </div>
-          </article>
-
-          <article class="project" data-reveal>
-            <header class="project-header">
-              <span class="project-index">05</span>
-              <div>
-                <h3>Certpulse</h3>
-                <p>TLS monitoring CLI</p>
-              </div>
-              <span class="project-status"><i aria-hidden="true"></i> Released</span>
-            </header>
-            <div class="project-body">
-              <div class="project-copy">
-                <p>
-                  A single-binary CLI for batch TLS certificate and protocol
-                  checks, with trust, hostname, expiration, OCSP, JSON, and
-                  Prometheus support built in.
-                </p>
-                <ul class="tag-list">
-                  <li>Go</li>
-                  <li>TLS</li>
-                  <li>OCSP</li>
-                  <li>Prometheus</li>
-                </ul>
-                <div class="project-links">
-                  <a href="https://github.com/1337lean/certpulse/releases/latest" target="_blank" rel="noreferrer">Latest release <span aria-hidden="true">↗</span></a>
-                  <a href="https://github.com/1337lean/certpulse" target="_blank" rel="noreferrer">View source <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-              <a class="project-media project-media-type" href="https://github.com/1337lean/certpulse" target="_blank" rel="noreferrer" aria-label="View Certpulse source">
-                <span>cert<em>pulse</em></span>
-                <small>TLS checks / clear signals</small>
-              </a>
-            </div>
-          </article>
-
-          <article class="project" data-reveal>
-            <header class="project-header">
-              <span class="project-index">06</span>
-              <div>
-                <h3>Relaybox</h3>
-                <p>Webhook infrastructure</p>
-              </div>
-              <span class="project-status"><i aria-hidden="true"></i> Released</span>
-            </header>
-            <div class="project-body">
-              <div class="project-copy">
-                <p>
-                  A durable webhook inbox that captures requests, verifies
-                  GitHub signatures, suppresses duplicates, retries forwarding,
-                  and includes an authenticated browser inspector.
-                </p>
-                <ul class="tag-list">
-                  <li>Go</li>
-                  <li>Webhooks</li>
-                  <li>HMAC</li>
-                  <li>Docker</li>
-                </ul>
-                <div class="project-links">
-                  <a href="https://github.com/1337lean/relaybox/releases/latest" target="_blank" rel="noreferrer">Latest release <span aria-hidden="true">↗</span></a>
-                  <a href="https://github.com/1337lean/relaybox" target="_blank" rel="noreferrer">View source <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-              <a class="project-media project-media-type" href="https://github.com/1337lean/relaybox" target="_blank" rel="noreferrer" aria-label="View Relaybox source">
-                <span>relay<em>box</em></span>
-                <small>Capture / verify / replay</small>
-              </a>
-            </div>
-          </article>
-
-          <article class="project" data-reveal>
-            <header class="project-header">
-              <span class="project-index">07</span>
-              <div>
-                <h3>Gatehouse</h3>
-                <p>Release policy CLI</p>
-              </div>
-              <span class="project-status"><i aria-hidden="true"></i> Released</span>
-            </header>
-            <div class="project-body">
-              <div class="project-copy">
-                <p>
-                  A dependency-free policy gate for release bundles that checks
-                  file constraints, checksums, SBOM structure, and provenance at
-                  CI and deployment boundaries.
-                </p>
-                <ul class="tag-list">
-                  <li>Go</li>
-                  <li>CI/CD</li>
-                  <li>SBOM</li>
-                  <li>Provenance</li>
-                </ul>
-                <div class="project-links">
-                  <a href="https://github.com/1337lean/gatehouse/releases/latest" target="_blank" rel="noreferrer">Latest release <span aria-hidden="true">↗</span></a>
-                  <a href="https://github.com/1337lean/gatehouse" target="_blank" rel="noreferrer">View source <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-              <a class="project-media project-media-type" href="https://github.com/1337lean/gatehouse" target="_blank" rel="noreferrer" aria-label="View Gatehouse source">
-                <span>gate<em>house</em></span>
-                <small>Trust releases / before deploy</small>
-              </a>
-            </div>
-          </article>
-
-          <article class="project" data-reveal>
-            <header class="project-header">
-              <span class="project-index">08</span>
-              <div>
-                <h3>IP Lens</h3>
-                <p>Native iPhone utility</p>
-              </div>
-              <span class="project-status project-status-quiet">Coming soon</span>
-            </header>
-            <div class="project-body">
-              <div class="project-copy">
-                <p>
-                  A privacy-focused native iPhone toolkit for IP intelligence,
-                  DNS and RDAP registration, offline subnet calculations, batch
-                  analysis, saved results, and local exports.
-                </p>
-                <ul class="tag-list">
-                  <li>SwiftUI</li>
-                  <li>SwiftData</li>
-                  <li>iOS 17+</li>
-                </ul>
-                <div class="project-links">
-                  <a href="https://buffer.lol/ip-lens" target="_blank" rel="noopener noreferrer">Learn more <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-              <a class="project-media project-media-app" href="https://buffer.lol/ip-lens" target="_blank" rel="noopener noreferrer" aria-label="Learn more about IP Lens">
-                <img class="app-icon-only" src="assets/ip-lens/app-icon.png" alt="IP Lens app icon" width="384" height="384" loading="lazy" decoding="async">
-              </a>
-            </div>
-          </article>
-
-          <article class="project" data-reveal>
-            <header class="project-header">
-              <span class="project-index">09</span>
-              <div>
-                <h3>Neon Tether</h3>
-                <p>Native iPhone game</p>
-              </div>
-              <span class="project-status project-status-beta"><i aria-hidden="true"></i> Beta</span>
-            </header>
-            <div class="project-body">
-              <div class="project-copy">
-                <p>
-                  A one-thumb orbital score-chaser for iPhone. Bend gravity,
-                  thread cores, skim mines, and build Overdrive across endless
-                  runs and a shared daily challenge—fully local, with no ads or purchases.
-                </p>
-                <ul class="tag-list">
-                  <li>SwiftUI</li>
-                  <li>SpriteKit</li>
-                  <li>iOS 17+</li>
-                  <li>TestFlight</li>
-                </ul>
-                <div class="project-links">
-                  <a href="https://neontether.com" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-              <a class="project-media project-media-app" href="https://neontether.com" target="_blank" rel="noopener noreferrer" aria-label="Visit the Neon Tether website">
-                <img class="app-icon-only" src="assets/neon-tether/app-icon.png" alt="Neon Tether app icon" width="384" height="384" loading="lazy" decoding="async">
-              </a>
-            </div>
-          </article>
-
-          <article class="project" data-reveal>
-            <header class="project-header">
-              <span class="project-index">10</span>
-              <div>
-                <h3>Kevin</h3>
-                <p>Discord &amp; Telegram bot</p>
-              </div>
-              <span class="project-status"><i aria-hidden="true"></i> Live</span>
-            </header>
-            <div class="project-body">
-              <div class="project-copy">
-                <p>
-                  A modular all-in-one Discord bot—moderation, automod, economy,
-                  music, tickets, and live alerts—plus a Telegram companion that
-                  answers questions with web-backed sources.
-                </p>
-                <ul class="tag-list">
-                  <li>Python</li>
-                  <li>discord.py</li>
-                  <li>SQLite</li>
-                  <li>OpenAI API</li>
-                </ul>
-                <div class="project-links">
-                  <a href="https://github.com/1337lean/kevin" target="_blank" rel="noreferrer">View source <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-              <a class="project-media project-media-app" href="https://github.com/1337lean/kevin" target="_blank" rel="noreferrer" aria-label="View Kevin source">
-                <img class="app-icon-only" src="assets/kevin/app-icon.png" alt="Kevin bot avatar" width="384" height="384" loading="lazy" decoding="async">
-              </a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="content-section split-section" id="about" aria-labelledby="about-title">
-        <header class="section-heading" data-reveal>
-          <h2 id="about-title">About</h2>
-          <span>In brief</span>
-        </header>
-
-        <div class="split-content" data-reveal>
-          <p class="lead">
-            My work sits where product thinking meets engineering.
-          </p>
-          <div class="prose">
-            <p>
-              I build useful web and native iPhone tools, privacy-minded
-              infrastructure, and model-powered workflows that hold up beyond
-              the first demo.
-            </p>
-            <p>
-              I care about speed, clarity, and the quiet details that make a
-              product feel considered.
-            </p>
-          </div>
-        </div>
-
-        <div class="toolkit" data-reveal>
-          <div class="toolkit-heading">
-            <h3>Toolkit</h3>
-            <span>What I reach for</span>
-          </div>
-          <ul>
-            <li><span>Interfaces</span><p>TypeScript, React, SwiftUI</p></li>
-            <li><span>Systems</span><p>Go, Node.js, Python, PostgreSQL</p></li>
-            <li><span>Infrastructure</span><p>Docker, Linux, network APIs</p></li>
-            <li><span>Applied AI</span><p>LLM APIs, agents, retrieval</p></li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="content-section connect-section" id="connect" aria-labelledby="connect-title">
-        <header class="section-heading" data-reveal>
-          <h2 id="connect-title">Connect</h2>
-          <span>Say hello</span>
-        </header>
-
-        <div class="connect-list" data-reveal>
-          <a href="mailto:hi@7331.lol">
-            <span>Email</span>
-            <strong>hi@7331.lol</strong>
-            <i aria-hidden="true">↗</i>
-          </a>
-          <a href="https://github.com/1337lean" target="_blank" rel="noreferrer">
+        <div class="hero-actions">
+          <a class="btn-link btn-link-primary" href="https://github.com/1337lean" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+              <path d="M9 18c-4.51 2-5-2-7-2"></path>
+            </svg>
             <span>GitHub</span>
-            <strong>@1337lean</strong>
-            <i aria-hidden="true">↗</i>
+          </a>
+          <a class="btn-link" href="mailto:hi@7331.lol">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+            <span>hi@7331.lol</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Featured Projects -->
+      <section class="section-block" id="projects" aria-labelledby="featured-title">
+        <header class="section-header">
+          <h2 class="section-title" id="featured-title">Featured Products</h2>
+          <p class="section-desc">Web platforms, privacy-focused utilities, and native iOS applications.</p>
+        </header>
+
+        <div class="featured-grid">
+          <!-- Portal -->
+          <article class="featured-card">
+            <div class="card-content">
+              <div>
+                <h3 class="card-title">Portal</h3>
+                <p class="card-tagline">Passkey-first encrypted messaging web client</p>
+                <p class="card-desc">
+                  Frontend web application for a passkey-first encrypted messenger featuring
+                  direct chats, group messaging, media sharing, and real-time audio and video calls.
+                </p>
+                <div class="tag-pills">
+                  <span>React</span>
+                  <span>TypeScript</span>
+                  <span>Tailwind CSS</span>
+                  <span>Vite</span>
+                </div>
+              </div>
+              <div class="card-links">
+                <a href="https://portalchat.org" target="_blank" rel="noreferrer">
+                  <span>Visit live</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+                </a>
+              </div>
+            </div>
+            <div class="card-visual">
+              <span class="card-visual-symbol">P/</span>
+            </div>
+          </article>
+
+          <!-- buffer.lol -->
+          <article class="featured-card">
+            <div class="card-content">
+              <div>
+                <h3 class="card-title">buffer.lol</h3>
+                <p class="card-tagline">Open-web diagnostic utility &amp; developer toolbox</p>
+                <p class="card-desc">
+                  A minimal, fast toolbox for network diagnostics, web checks, IP lookups,
+                  and everyday developer tasks — searchable, lightweight, and clear
+                  about what executes locally in your browser.
+                </p>
+                <div class="tag-pills">
+                  <span>Next.js</span>
+                  <span>TypeScript</span>
+                  <span>Network APIs</span>
+                </div>
+              </div>
+              <div class="card-links">
+                <a href="https://github.com/1337lean/buffer.lol" target="_blank" rel="noreferrer">
+                  <span>Source</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+                </a>
+              </div>
+            </div>
+            <div class="card-visual">
+              <span class="card-visual-symbol">b/</span>
+            </div>
+          </article>
+
+          <!-- 7331.cloud -->
+          <article class="featured-card">
+            <div class="card-content">
+              <div>
+                <h3 class="card-title">7331.cloud</h3>
+                <p class="card-tagline">Anonymous temporary image hosting platform</p>
+                <p class="card-desc">
+                  Anonymous image hosting engineered for rapid uploads, clean direct
+                  links, and short retention periods — paired with a standalone cross-platform
+                  terminal CLI in Go.
+                </p>
+                <div class="tag-pills">
+                  <span>Next.js</span>
+                  <span>TypeScript</span>
+                  <span>Go</span>
+                  <span>Docker</span>
+                </div>
+              </div>
+              <div class="card-links">
+                <a href="https://github.com/1337lean/7331-cli/releases/latest" target="_blank" rel="noreferrer">
+                  <span>Get CLI</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+                </a>
+                <a href="https://github.com/1337lean/7331-cli" target="_blank" rel="noreferrer">
+                  <span>Source</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+                </a>
+              </div>
+            </div>
+            <div class="card-visual">
+              <span class="card-visual-symbol">73</span>
+            </div>
+          </article>
+
+          <!-- Neon Tether -->
+          <article class="featured-card">
+            <div class="card-content">
+              <div>
+                <h3 class="card-title">Neon Tether</h3>
+                <p class="card-tagline">Native orbital score-chaser for iPhone</p>
+                <p class="card-desc">
+                  A one-thumb orbital physics game for iOS. Bend gravity around planetary cores,
+                  thread minefields, and trigger Overdrive across endless runs and daily
+                  challenges — strictly local, with zero ads or tracking.
+                </p>
+                <div class="tag-pills">
+                  <span>SwiftUI</span>
+                  <span>SpriteKit</span>
+                  <span>iOS 17+</span>
+                </div>
+              </div>
+              <div class="card-links">
+                <a href="https://github.com/1337lean/neon-tether" target="_blank" rel="noreferrer">
+                  <span>Source</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+                </a>
+              </div>
+            </div>
+            <div class="card-visual app-icon">
+              <img src="assets/neon-tether/app-icon.png" alt="Neon Tether app icon" width="80" height="80" loading="lazy" decoding="async">
+            </div>
+          </article>
+
+          <!-- IP Lens -->
+          <article class="featured-card">
+            <div class="card-content">
+              <div>
+                <h3 class="card-title">IP Lens</h3>
+                <p class="card-tagline">Native iPhone IP intelligence &amp; diagnostics toolkit</p>
+                <p class="card-desc">
+                  A privacy-first native iPhone toolkit for IP intelligence, ASN &amp; RDAP
+                  registration, offline subnet calculations, batch analysis, saved queries,
+                  and private local data exports.
+                </p>
+                <div class="tag-pills">
+                  <span>SwiftUI</span>
+                  <span>SwiftData</span>
+                  <span>iOS 17+</span>
+                </div>
+              </div>
+              <div class="card-links">
+                <a href="https://buffer.lol/ip-lens" target="_blank" rel="noreferrer">
+                  <span>Learn more</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+                </a>
+              </div>
+            </div>
+            <div class="card-visual app-icon">
+              <img src="assets/ip-lens/app-icon.png" alt="IP Lens app icon" width="80" height="80" loading="lazy" decoding="async">
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Developer Tools & Open Source -->
+      <section class="section-block" id="tools" aria-labelledby="tools-title">
+        <header class="section-header">
+          <h2 class="section-title" id="tools-title">Developer Tools &amp; Infrastructure</h2>
+          <p class="section-desc">Single-binary CLI tools, webhook daemons, policy gates, and bots.</p>
+        </header>
+
+        <div class="tools-grid">
+          <!-- Envguard -->
+          <article class="tool-card">
+            <div>
+              <div class="tool-card-header">
+                <h3 class="tool-card-title">Envguard</h3>
+              </div>
+              <p class="tool-card-tagline">Go · Dotenv contract CLI</p>
+              <p class="tool-card-desc">
+                Dependency-free CLI that catches dotenv configuration drift before deployment
+                with safe templates and typed schema validation — without printing secret values.
+              </p>
+            </div>
+            <div class="tool-card-bottom">
+              <div class="tool-card-tags">
+                <span>Go</span>
+                <span>CLI</span>
+                <span>DevSecOps</span>
+              </div>
+              <div class="tool-card-links">
+                <a href="https://github.com/1337lean/envguard/releases/latest" target="_blank" rel="noreferrer">
+                  <span>Latest release</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+                </a>
+                <a href="https://github.com/1337lean/envguard" target="_blank" rel="noreferrer">
+                  <span>Source</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Certpulse -->
+          <article class="tool-card">
+            <div>
+              <div class="tool-card-header">
+                <h3 class="tool-card-title">Certpulse</h3>
+              </div>
+              <p class="tool-card-tagline">Go · TLS monitoring CLI</p>
+              <p class="tool-card-desc">
+                Single-binary CLI for batch TLS certificate, cipher suite, and protocol checks,
+                featuring trust verification, expiration notices, OCSP stapling, and Prometheus support.
+              </p>
+            </div>
+            <div class="tool-card-bottom">
+              <div class="tool-card-tags">
+                <span>Go</span>
+                <span>TLS</span>
+                <span>OCSP</span>
+                <span>Prometheus</span>
+              </div>
+              <div class="tool-card-links">
+                <a href="https://github.com/1337lean/certpulse/releases/latest" target="_blank" rel="noreferrer">
+                  <span>Latest release</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+                </a>
+                <a href="https://github.com/1337lean/certpulse" target="_blank" rel="noreferrer">
+                  <span>Source</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Relaybox -->
+          <article class="tool-card">
+            <div>
+              <div class="tool-card-header">
+                <h3 class="tool-card-title">Relaybox</h3>
+              </div>
+              <p class="tool-card-tagline">Go · Webhook inbox daemon</p>
+              <p class="tool-card-desc">
+                Durable webhook collector that verifies HMAC signatures, suppresses duplicates,
+                handles reliable retry forwarding, and provides an authenticated live browser inspector.
+              </p>
+            </div>
+            <div class="tool-card-bottom">
+              <div class="tool-card-tags">
+                <span>Go</span>
+                <span>Webhooks</span>
+                <span>HMAC</span>
+                <span>Docker</span>
+              </div>
+              <div class="tool-card-links">
+                <a href="https://github.com/1337lean/relaybox/releases/latest" target="_blank" rel="noreferrer">
+                  <span>Latest release</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+                </a>
+                <a href="https://github.com/1337lean/relaybox" target="_blank" rel="noreferrer">
+                  <span>Source</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Gatehouse -->
+          <article class="tool-card">
+            <div>
+              <div class="tool-card-header">
+                <h3 class="tool-card-title">Gatehouse</h3>
+              </div>
+              <p class="tool-card-tagline">Go · Release policy CLI</p>
+              <p class="tool-card-desc">
+                Dependency-free policy gate for release bundles that enforces file constraints,
+                checksum validations, SBOM structural integrity, and provenance at deployment boundaries.
+              </p>
+            </div>
+            <div class="tool-card-bottom">
+              <div class="tool-card-tags">
+                <span>Go</span>
+                <span>CI/CD</span>
+                <span>SBOM</span>
+                <span>Security</span>
+              </div>
+              <div class="tool-card-links">
+                <a href="https://github.com/1337lean/gatehouse/releases/latest" target="_blank" rel="noreferrer">
+                  <span>Latest release</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+                </a>
+                <a href="https://github.com/1337lean/gatehouse" target="_blank" rel="noreferrer">
+                  <span>Source</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Kevin -->
+          <article class="tool-card">
+            <div>
+              <div class="tool-card-header">
+                <div class="tool-card-title-group">
+                  <img class="tool-avatar" src="assets/kevin/app-icon.png" alt="Kevin bot avatar" width="28" height="28" loading="lazy">
+                  <h3 class="tool-card-title">Kevin</h3>
+                </div>
+              </div>
+              <p class="tool-card-tagline">Python · Discord &amp; Telegram Bot</p>
+              <p class="tool-card-desc">
+                A modular Discord bot covering moderation, economy, ticket management, and automod,
+                plus a companion Telegram assistant that answers inquiries with web-backed citations.
+              </p>
+            </div>
+            <div class="tool-card-bottom">
+              <div class="tool-card-tags">
+                <span>Python</span>
+                <span>discord.py</span>
+                <span>SQLite</span>
+                <span>OpenAI API</span>
+              </div>
+              <div class="tool-card-links">
+                <a href="https://github.com/1337lean/kevin" target="_blank" rel="noreferrer">
+                  <span>View source</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- About & Toolkit -->
+      <section class="section-block" id="about" aria-labelledby="about-title">
+        <header class="section-header">
+          <h2 class="section-title" id="about-title">About &amp; Approach</h2>
+          <p class="section-desc">Engineering principles and technologies I reach for.</p>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <p class="about-lead">
+              My work sits where product thinking meets robust systems engineering.
+            </p>
+            <p>
+              I build web utilities, native iPhone applications, and security-minded
+              infrastructure. I care deeply about speed, low resource footprints, and
+              the quiet details that make software dependable long after the demo.
+            </p>
+            <p>
+              I favor dependency-free CLI tools when building for the terminal, native
+              SwiftUI for iOS, and clean, standards-based code for the open web.
+            </p>
+          </div>
+
+          <div class="toolkit-container">
+            <div class="toolkit-item">
+              <div class="toolkit-category">Interfaces &amp; Native</div>
+              <div class="toolkit-items">SwiftUI, SpriteKit, TypeScript, React, Next.js</div>
+            </div>
+            <div class="toolkit-item">
+              <div class="toolkit-category">Systems &amp; Backends</div>
+              <div class="toolkit-items">Go, Python, Node.js, SQLite, PostgreSQL, FastAPI</div>
+            </div>
+            <div class="toolkit-item">
+              <div class="toolkit-category">Infrastructure &amp; Security</div>
+              <div class="toolkit-items">Docker, Linux, TLS / OCSP, HMAC, Webhooks, CI/CD</div>
+            </div>
+            <div class="toolkit-item">
+              <div class="toolkit-category">Specializations</div>
+              <div class="toolkit-items">Dotenv Contracts, Local Diagnostics, Network Tooling</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Connect -->
+      <section class="section-block" id="connect" aria-labelledby="connect-title">
+        <header class="section-header">
+          <h2 class="section-title" id="connect-title">Get in Touch</h2>
+          <p class="section-desc">Available for conversations, project inquiries, or open-source collaboration.</p>
+        </header>
+
+        <div class="connect-grid">
+          <a class="connect-card" href="mailto:hi@7331.lol">
+            <div class="connect-info">
+              <span class="connect-label">Email</span>
+              <span class="connect-value">hi@7331.lol</span>
+            </div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17L17 7"></path>
+              <path d="M7 7h10v10"></path>
+            </svg>
+          </a>
+
+          <a class="connect-card" href="https://github.com/1337lean" target="_blank" rel="noreferrer">
+            <div class="connect-info">
+              <span class="connect-label">GitHub</span>
+              <span class="connect-value">@1337lean</span>
+            </div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17L17 7"></path>
+              <path d="M7 7h10v10"></path>
+            </svg>
           </a>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer shell">
-      <p>© <span id="year">2026</span> lean</p>
-      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    <!-- Site Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>&copy; <span id="year">2026</span> lean</span>
+        <a href="#top">
+          <span>Back to top</span>
+          <span aria-hidden="true">&uarr;</span>
+        </a>
+      </div>
     </footer>
   </body>
 </html>
